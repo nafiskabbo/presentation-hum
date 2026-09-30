@@ -1,0 +1,46 @@
+node_modules/
+# Bun - bun.lock is committed, no node_modules
+# (run `bun install` to restore deps)
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temp / misc
+:memory:.ses
+*.ses
+*.log
+~$*
+
+# Project private
+specs
+
+# Keep output/ tracked for GitHub (do NOT ignore)
+# output/ is intentionally NOT ignored
