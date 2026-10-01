@@ -116,18 +116,22 @@ are longer relative to our 6 km range and we need a higher density of pad sites 
 
 ## 7. Structure
 
-47 slides: title, overview, eleven section dividers, thirty four content slides, closing.
+48 slides: title, overview, eleven section dividers, thirty five content slides, closing. Section 4
+carries four content slides because the risk argument is the part that most needs a diagram.
 
 - **Slide 1, title.** Big AeroSetu wordmark, the standing descriptor, and a roll call of the eight
   presenters showing their section numbers and names. Nothing else. No strapline, no tagline, no
   "Rajshahi first" box, no counts line. The hero image on the right is `slide_one_hero.png`,
   supplied by the client.
 - **Slide 2, overview.** Title is exactly **Overview**, subtitle is exactly **Presentation
-  outline**. Lists all eleven sections with their framework. The same header treatment is used on
+  outline**. Section number in the left gutter, section title beside it, framework pushed to the
+  right edge, one row per section, in three labelled columns. **No page or slide number appears
+  anywhere on this slide.** The same header treatment is used on
   every page from slide 2 to the end.
-- **Each section opens with a divider** carrying the number, the minimal section title, the
-  framework name and one claim the section has to land. Dividers carry **no presenter name and
-  no "presented by" label**.
+- **Each section opens with a divider** carrying the minimal section title, the framework name and
+  one claim the section has to land, plus a burgundy spine down the left edge. Dividers carry **no
+  decorative section numeral**, **no presenter name** and **no "presented by" label**. The header
+  eyebrow on the following slides already states the section number.
 - **Final slide, thank you.** No names. Follow the earlier LLM deck: "Thank You", "Open
   Discussions", a line welcoming questions from the professor and audience, and three numbered
   discussion questions.
@@ -158,6 +162,13 @@ are longer relative to our 6 km range and we need a higher density of pad sites 
   fewer. No paragraph anywhere. Never more than about 55 words of body text on a slide.
 - Every framework is a purpose built diagram, not a bulleted list.
 - Section titles are minimal. The framework name does the describing.
+- **Sections 3 and 4 are diagram led.** Section 3 opens with a left to right escalation flow with
+  trigger labels on the arrows and a safety path running underneath all three tiers, then a
+  two by two latency against capability map of the four architectures, then a cost share bar
+  showing AI inference as a fraction of one hub. Section 4 opens with a probability against impact
+  heat map carrying all nine risks as numbered dots.
+- A diagram must survive being read from the back of a room. No diagram may rely on a legend alone,
+  and no annotation may drop below 12 pt.
 - Never an em dash or en dash anywhere.
 - No raw URLs in the deck body.
 
@@ -172,7 +183,7 @@ are longer relative to our 6 km range and we need a higher density of pad sites 
   without moving the one below it.
 - **Footer left, low on the slide: `Vision and AI powered drone food delivery`.** Always that
   string. It is not the brand name, not the section title, and it never varies.
-- **Footer right, on the same low line: the page counter written as one unit**, `3/51`, not the
+- **Footer right, on the same low line: the page counter written as one unit**, `3/48`, not the
   number and the total in separate boxes. The number is a live PowerPoint `slidenum` field,
   injected by `build/slidenum.py`, so it renumbers itself when slides are inserted, moved or
   deleted. The total is static text, because PowerPoint has no total-slides field; if the client
@@ -227,7 +238,7 @@ Report the result of each, do not claim success:
 - **No text below 12 pt**, verified by reading font sizes out of the generated XML.
 - Body text is 14 pt or larger.
 - Footer left shows exactly `Vision and AI powered drone food delivery`.
-- Page counter reads `n/47` as one unit, the number is a live field, and it is confirmed by
+- Page counter reads `n/48` as one unit, the number is a live field, and it is confirmed by
   poisoning the cached values, rendering to PDF and checking PowerPoint recomputed all of them.
 - Slide 2 is titled `Overview` with the subtitle `Presentation outline`, and lists all eleven
   sections.

@@ -1,6 +1,6 @@
 # AeroSetu: full presentation speech
 
-Deck: `output/AeroSetu_Group_Presentation-v1.pptx`, 47 slides, 11 sections.
+Deck: `output/AeroSetu_Group_Presentation-v1.pptx`, 48 slides, 11 sections.
 Timing: about 27 minutes at 140 words per minute. Roughly 3800 spoken words.
 Eleven sections over eight presenters: Srijon, Kabbo and Mubashshirul each carry two, the rest
 carry one. Read the slide number in brackets at the start of each block.
@@ -72,7 +72,7 @@ That is exactly why we start small.
 
 ---
 
-## Sections 3 and 4, Nafis Islam Kabbo (2303180) — slides 10 to 17
+## Sections 3 and 4, Nafis Islam Kabbo (2303180) — slides 10 to 18
 
 **[Slide 10]** I am Nafis. I own the technology, and technical safety and navigation risk.
 
@@ -92,11 +92,12 @@ And look at the green bar. Hard safety rules, state estimation, path planning an
 are always local and deterministic. If the link drops mid flight, the aircraft finishes vision only
 and lands. A network outage is a slower delivery. It is never an unsafe one.
 
-**[Slide 12]** Four architectures, and why we chose one. This is a procurement decision with a
-margin attached. Vision only is cheapest, but it leaves the hard case unsolved. Vision and GLM is
-slow and wastes reasoning tokens on easy calls. Vision and Jev is the right shape but has no
-fallback for genuinely ambiguous cases. We build all three tiers, and every tier is an escalation,
-so the expensive model is the exception rather than the rule.
+**[Slide 12]** Four architectures, plotted on two axes: how fast the answer comes back, and whether
+the system can handle the genuinely hard case. Vision only is cheap and fast and blind in exactly the
+situations that matter. Vision and GLM covers it, but slowly, and it burns reasoning tokens on easy
+calls, which is paying a specialist to read a menu. Vision and Jev is fast and cheap but has no
+answer when a case is genuinely strange. There is exactly one point high on capability and low on
+latency at the same time. That is the one we build.
 
 **[Slide 13]** And the model choice, made for business reasons rather than benchmark scores.
 
@@ -117,7 +118,15 @@ because Jev is fast and cheap but closed.
 **[Slide 14]** Section four, technical safety and navigation risk. A risk without an owner and a
 trigger is only a worry.
 
-**[Slide 15]** The register, first five. CAAB refuses permission, medium and severe, mitigated by a
+**[Slide 15]** All nine risks on one map, probability against impact. Look at the top row. Risks one
+and two sit in the same square: CAAB refusing permission, and a corridor crossing restricted airspace.
+People treat these as two items. They are one risk seen from two directions, and both are asking the
+same question, which is whether we are allowed to fly at all.
+
+Risk five is the one that bites us in year one, vision failing in heavy rain, and our answer is
+weather thresholds that stop launches outright. We would rather fly nothing in July than fly badly.
+
+**[Slide 16]** The register itself, first five. CAAB refuses permission, medium and severe, mitigated by a
 pre-application meeting first and no hardware ordered before a written response. Corridor crosses
 restricted airspace, medium and severe, mitigated by an altitude cap and re-routing verified on map.
 Aircraft lands outside a pad, low and severe, mitigated by on-board pad recognition and a local
@@ -127,14 +136,14 @@ outright.
 
 Risks one and two are the same risk from two sides: whether we are allowed to fly at all.
 
-**[Slide 16]** Risks six to nine, operating and commercial. Battery degradation, Jev withdrawn or
+**[Slide 17]** Risks six to nine, operating and commercial. Battery degradation, Jev withdrawn or
 repriced, pad host withdraws consent, rider or customer refuses a pad. None is fatal alone.
 
 But risk seven is the one people forget, and it is in the box. We chose a closed model for our
 fastest tier, and we accept that. The mitigation is not a contract. It is a rule set that works
 without Jev.
 
-**[Slide 17]** Three risks we will not take, stated as prohibitions rather than ambitions. No flight
+**[Slide 18]** Three risks we will not take, stated as prohibitions rather than ambitions. No flight
 over a crowd, so corridors are sized never to cross a school, hospital or stadium, with no exception
 and no launch. No flight without a recoverable pad, so if the pad is not recognised the aircraft
 does not descend, it holds and returns home. And no model on the safety path, so safety rules, state
