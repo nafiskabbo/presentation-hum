@@ -1,470 +1,400 @@
-# Full Presentation Speech Script
-**Paper:** Large Language Models Cannot Self-Correct Reasoning Yet (ICLR 2024)
-**Authors:** Jie Huang (UIUC), Xinyun Chen, Swaroop Mishra, Huaixiu Steven Zheng, Adams Wei Yu, Xinying Song, Denny Zhou (Google DeepMind)
-**Conference:** International Conference on Learning Representations (ICLR) 2024
-**Group Presenters in speaking order:**
-1. Nafis Islam Kabbo (2303180) - Section 1: Introduction and Research Problem (Slides 01-05, ~3.5 mins)
-2. Srijon (2303179) - Section 2: Literature Review and Background (Slides 06-08, ~3.0 mins)
-3. Anindo (2303181) - Section 3: Methodology and Experimental Setup (Slides 09-11, ~3.0 mins)
-4. Mahid (2303127) - Section 4: Main Results (Slides 12-15, ~3.5 mins)
-5. Jebon (2303160) - Section 5: Why Does Self-Correction Fail? (Slides 16-19, ~3.5 mins)
-6. Refayet (2303148) - Section 6: Conclusion, Limitations, and Future Directions (Slides 20-23, ~3.5 mins)
+# AeroSetu: full presentation speech
+
+Deck: `output/AeroSetu_Group_Presentation-v1.pptx`, 51 slides, 12 sections.
+Timing: about 28 minutes at 140 words per minute. Roughly 4000 spoken words.
+Twelve sections over eight presenters means four people carry two sections each. The heaviest
+load is 6 content slides, the lightest 2, and that spread is deliberate.
+Read the slide number in brackets at the start of each block.
 
 ---
 
-# Slide 01: Title Slide
-**Speaker:** Nafis Islam Kabbo (2303180)
-**Topic:** 1. Introduction and Research Problem
-**Target Duration:** ~45 seconds
+## Slide 1, title
 
-## Spoken Script
+**[Slide 1]** Good morning. We are AeroSetu, a vision and AI powered drone food delivery business
+analysis. The roll call on the right is our eight presenters and the sections each of us owns. We
+have split the analysis into twelve sections, so four of us are covering two.
 
-Good morning everyone. Respected professor and fellow classmates.
+## Slide 2, overview
 
-We are presenting *Large Language Models Cannot Self-Correct Reasoning Yet*, published at ICLR 2024 by Jie Huang at UIUC along with Denny Zhou and colleagues at Google DeepMind.
-
-If you have ever used ChatGPT for math or multi-step logic, you know the familiar scenario. The model outputs a confident, step-by-step chain of thought, but arrives at the wrong final answer. When you prompt it to check its work, it politely apologizes and produces a completely different wrong answer. Today, our team will explore why this happens and why previous claims that language models can self-correct reasoning were largely experimental artifacts.
-
-I will introduce the reasoning vulnerability and our central research question. Srijon will cover prior frameworks and literature flaws. Anindo will detail the experimental methodology. Mahid will present the empirical benchmark results. Jebon will analyze why verification fails, and Refayet will conclude with limitations and constructive future directions.
-
-Let us begin.
+**[Slide 2]** This is the shape of the talk. Section one is the problem and the market, section two
+is our value proposition. Section three is the technology, which is the part we are most confident
+about and I will come back to it. Sections four and five are money. Six and seven are the internal
+and external SWOT. Eight is the business environment, nine is competition. Ten and eleven are
+operations and risk, and twelve is impact, ethics and where this goes next.
 
 ---
 
-# Slide 02: Presentation Outline
-**Speaker:** Nafis Islam Kabbo (2303180)
-**Topic:** Overview
-**Target Duration:** ~40 seconds
+## Sections 1 and 2, MD Masfie Amin Srijon (2303179) — slides 3 to 9
 
-## Spoken Script
+**[Slide 3]** I am Masfie. I own the first two sections: the problem and the market, and our value
+proposition.
 
-Here is the roadmap for our presentation across six focused sections:
+**[Slide 4]** AeroSetu flies a corridor, not a route. An order is matched to a landing pad, the
+drone launches from a hub, vision flies it down a corridor to the pad, it lands, and it returns.
+What we sell is a promise, and the promise has a number in it: fifteen minutes, every time. The
+customer also gets no rider sitting in traffic, and food that arrives hot.
 
-Section 1, Introduction. Why sequential multi-step reasoning is fragile and what self-correction promised.
+**[Slide 5]** We start in Rajshahi, on purpose. This is not us avoiding Dhaka. Rajshahi has 553,288
+people in the city at the 2022 census. Its urbanisation rate is 33 percent and growing near 8
+percent a year. Four flyover projects worth about 490 crore taka began in December 2023 and every
+one was still unfinished in September 2026. And on 16 March 2025 IQAir ranked it the most polluted
+city in the country.
 
-Section 2, Background and Literature. Prior frameworks including RCI, Reflexion, Self-Refine, and Debate, alongside their evaluation confounders.
+Now the weakness, because a plan that only lists strengths is not a plan. Rajshahi is less dense
+than Dhaka, so our corridors run longer against a six kilometre range. That needs more pads per
+corridor, and pads are capital. And RCC will ask hard questions about the university area. We still
+start here, because a smaller regulator is a smaller bet.
 
-Section 3, Methodology. Evaluation benchmarks across GSM8K, CommonSenseQA, and HotpotQA across four frontier language models.
+**[Slide 6]** And the market is not a forecast. This is Dhaka's road tax, measured. Average journey,
+74 minutes, for a trip a drone flies in six. 1.4 million trips a day, about a fifth of them now over
+an hour. The average commuter loses four hours a day. Mean trip time has risen 0.6 percent since
+2016 because the corridor space has been taken.
 
-Section 4, Results. Empirical proof showing that intrinsic self-correction consistently decreases accuracy.
+Rajshahi pays the same tax, smaller. This is a market that already exists, priced every day, in
+lost time.
 
-Section 5, Analysis. Why compute parity, prompt design artifacts, compliance bias, and shared parameters prevent successful verification.
+**[Slide 7]** Section two. One claim has to survive contact with a competitor, and it is the fixed
+window.
 
-Section 6, Conclusion and Future Work. Where tool-augmented refinement works and fair standards for future research.
+**[Slide 8]** The Value Proposition Canvas. I will only claim one thing. The customer job is to get
+hot food fast. The pain is traffic and uncertainty. The gain is time back in the day. Our product
+is a corridor delivery and the pad it lands on. Our pain reliever is vision flying, because a
+corridor is not a road, so congestion is simply irrelevant to it.
 
----
+The claim we must defend is one line. A rider can be fast. A rider cannot be fifteen minutes,
+every time, in rain, without a road.
 
-# Slide 03: Large Language Models and Reasoning
-**Speaker:** Nafis Islam Kabbo (2303180)
-**Topic:** 1. Introduction and Research Problem
-**Target Duration:** ~50 seconds
+**[Slide 9]** Problem Solution Fit, and I will be honest about it. Five of six dimensions are
+genuinely proven. The problem is real and measured. The technology is demonstrated elsewhere. The
+customer behaviour already exists. Revenue compares to existing platforms. The channel works, but
+the pads are the barrier.
 
-## Spoken Script
-
-Let us look at the flowchart on this slide to understand why multi-step reasoning breaks down.
-
-Large language models generate text autoregressively, predicting one token at a time from left to right. When solving reasoning tasks using Chain of Thought, the model generates intermediate deductions sequentially.
-
-As illustrated in our diagram, the input question enters the system. In step one of the reasoning chain, the deduction is sound. However, in step two, a slight arithmetic or logical slip occurs. Because every subsequent token is conditioned on previous tokens, step three inherits the corrupted premise. By the time the model outputs its final answer, the result is completely wrong.
-
-This is the domino effect of sequential reasoning. The model has no internal mechanism to pause, backtrack, or recognize that step two was flawed. Self-correction was proposed as the solution to this exact problem.
-
----
-
-# Slide 04: The Concept of Self-Correction
-**Speaker:** Nafis Islam Kabbo (2303180)
-**Topic:** 1. Introduction and Research Problem
-**Target Duration:** ~45 seconds
-
-## Spoken Script
-
-Researchers proposed an intuitive three-step loop to address reasoning failures.
-
-Step one, Draft Answer. The model generates an initial Chain of Thought and tentative answer.
-
-Step two, Self-Critique. The model receives a prompt such as "Review your reasoning and find any flaws."
-
-Step three, Revised Answer. The model updates its reasoning and outputs a refined answer. This loop is repeated for up to two rounds.
-
-The promise was autonomous reasoning refinement without human intervention. However, the critical caveat is that this entire process is intrinsic. It relies on the exact same model with frozen parameters talking to itself, without calculators, external verifiers, or ground truth labels. That brings us to the central paradox of the paper.
+The sixth row is the context, and it says unproven in Bangladesh. Permission, monsoon, and a
+regulator with no precedent. So the customer problem is solved, and the operating context is not.
+That is exactly why we start small.
 
 ---
 
-# Slide 05: The Central Research Question
-**Speaker:** Nafis Islam Kabbo (2303180)
-**Topic:** 1. Introduction and Research Problem
-**Target Duration:** ~50 seconds
+## Sections 3 and 4, Nafis Islam Kabbo (2303180) — slides 10 to 17
 
-## Spoken Script
+**[Slide 10]** I am Nafis. I own technology, and the business model.
 
-Here is the central question that drives this entire study:
+**[Slide 11]** This is the slide that matters most in our whole analysis. Vision does the flying. It
+runs on the aircraft, always, and it handles navigation, obstacle detection, corridor following
+and landing. It needs no network.
 
-"If a model can correct a mistake, why did it not get it right the first time?"
+On top of that is an escalation chain. Jev is called only when a fast, bounded decision is needed.
+It reads structured flight state and returns a typed action with a probability, so it can say
+continue, reposition, abort landing, or return home. GLM-5.3-Flash sits above that, called only for
+genuinely ambiguous situations where you want multimodal reasoning.
 
-Consider the mechanics. The weights of the model are frozen. When the model critiques its own answer, no new information or external signal has been added. You are feeding the model's own flawed generation back into the very network that generated it.
+The frequency is what makes this affordable. Vision runs on every flight. Jev runs on most
+decisions. GLM runs on a small minority.
 
-The authors isolate intrinsic self-correction specifically. While external tool assistance like code execution is valuable, the paper asks whether a model alone possesses the self-awareness to fix its own reasoning. If intrinsic correction worked, it would represent free accuracy gains. The paper proves it does not.
+And look at the green bar. Hard safety rules, state estimation, path planning and flight control
+are always local and deterministic. If the link drops mid flight, the aircraft finishes vision only
+and lands. A network outage is a slower delivery. It is never an unsafe one.
 
-I will now hand over to Srijon to examine the prior literature.
+**[Slide 12]** Four architectures, and why we chose one. This is a procurement decision with a
+margin attached. Vision only is cheapest, but it leaves the hard case unsolved. Vision and GLM is
+slow and wastes reasoning tokens on easy calls. Vision and Jev is the right shape but has no
+fallback for genuinely ambiguous cases. We build all three tiers, and every tier is an escalation,
+so the expensive model is the exception rather than the rule.
 
----
+**[Slide 13]** And the model choice, made for business reasons rather than benchmark scores.
 
-# Slide 06: Prior Self-Correction Frameworks
-**Speaker:** Srijon (2303179)
-**Topic:** 2. Literature Review and Background
-**Target Duration:** ~50 seconds
+GLM-5.3-Flash, from Z.ai. MIT licence, weights ungated on Hugging Face, commercial use permitted.
+About 0.075 dollars per million input tokens and 0.25 per million output. Its intelligence index is
+57, against a median near 27 for open weight peers its size. And we cap the reasoning effort, so a
+hard flight cannot bill us without limit.
 
-## Spoken Script
+Jev, from TypeSafe AI. Here I have to be straight with you. It is proprietary and hosted, with no
+public weights, so we cannot self host it. About 0.0029 dollars per thousand decisions on the
+vendor's own estimate. And it is genuinely the right tool, because it returns a typed action with a
+probability that a flight path can act on directly. But we are accepting vendor lock in on our
+fastest tier, and a licence change would force a rebuild.
 
-Thank you, Kabbo. I am Srijon, and I will examine the four prominent frameworks in literature.
+The decision in one line: one vendor we own, because we can host and fork GLM. One vendor we rent,
+because Jev is fast and cheap but closed.
 
-As shown in our four visual architecture cards:
+**[Slide 14]** And this is how escalation works as an operating procedure. Vision only when the
+obstacle is clear, the pad is free and weather is inside limits. That always happens on board.
+Vision to Jev when the pad is occupied, the approach is degraded, or confidence is below the floor.
+That is most decisions. Jev to GLM when the case is ambiguous or unlike training. That is rare. And
+the safety path, when any hard limit is crossed or the link is lost, is a deterministic return. That
+is never escalated.
 
-First, RCI, or Recursive Critique and Improvement, from NeurIPS 2023. It prompts the model to recursively detect and patch code errors zero-shot.
+Escalation is a cost control and a safety control at once.
 
-Second, Reflexion, also from NeurIPS 2023. It converts binary test execution failures into verbal memory stored across multiple trial attempts.
+**[Slide 15]** Section four, the business model. The bottom row of the canvas decides whether this
+business exists.
 
-Third, Self-Refine, from NeurIPS 2023. It runs an iterative feedback loop using structured feedback checklists across style and logic.
+**[Slide 16]** The Business Model Canvas. I will not read all nine blocks. The three that matter are
+the bottom row. Customer segments is urban households ordering three or more times a week. Cost
+structure is airframes, hubs, pads, staff, insurance, connectivity and AI inference. Revenue is
+delivery fee, subscription, kitchen contract, and later corridor data.
 
-Fourth, Multi-Agent Debate. It deploys multiple model instances that debate divergent solutions to reach consensus.
+**[Slide 17]** Six revenue streams, and the order matters. Delivery fee at 90 taka, from day one.
+Subscription at 499 a month from month six, and this is the one that changes the maths, because
+five flights a month turns a cost into a habit. Kitchen contract at six to ten percent from month
+nine. Pad hosting at 400 a month from month nine, which pays for the pad on the customer's roof.
+Corporate and NGO in year two. Corridor data in year three.
 
-All four papers claimed substantial gains of seven to fifteen percent. However, as our bottom callout highlights, these reported improvements stemmed from hidden evaluation confounders.
-
----
-
-# Slide 07: Intrinsic vs. External Feedback
-**Speaker:** Srijon (2303179)
-**Topic:** 2. Literature Review and Background
-**Target Duration:** ~60 seconds
-
-## Spoken Script
-
-This slide contrasts the two fundamentally different regimes that prior literature often conflated.
-
-On the left, we trace Intrinsic Self-Correction. The model generates a draft, receives an unguided prompt to find flaws, and attempts a blind revision. Because the weights are frozen and no external ground truth exists, the model has no reliable verification signal. It second-guesses sound steps, causing accuracy to drop across rounds by up to 27.5 percent.
-
-On the right, we trace External and Tool-Assisted Feedback. Here, the model generates executable code or formulas evaluated by a deterministic engine like a Python interpreter or oracle. The environment returns exact error traces. The model then conditions its update on this objective ground truth, achieving genuine gains of seven to fifteen percent.
-
-The core takeaway is clear: without external grounding, a frozen model cannot produce a new verification signal.
-
----
-
-# Slide 08: Flaws in Prior Evaluations
-**Speaker:** Srijon (2303179)
-**Topic:** 2. Literature Review and Background
-**Target Duration:** ~55 seconds
-
-## Spoken Script
-
-As shown in our comparison chart and diagnostic breakdown from Table 1, prior claims relied on three root confounders.
-
-Notice the bars on our chart: reported gains of four to ten percent completely collapse to zero or negative values when properly controlled.
-
-First, Oracle Leakage, affecting RCI and Reflexion. The evaluation harness secretly used test labels to alert the model only when its answer was wrong. By shielding correct answers from revision, apparent scores could only go up. In real applications, no oracle exists.
-
-Second, Unfair Compute Parity, affecting Multi-Agent Debate. Debate consumed three to six times more compute than single-shot baselines. When compared against Self-Consistency at equal sample budgets, the debate advantage completely vanished.
-
-Third, Prompt Design Distortion, affecting Self-Refine. Initial prompts omitted critical rules, which were only supplied during the feedback prompt. The model was merely following delayed instructions rather than self-correcting logic.
-
-When these confounders are eliminated, intrinsic reasoning gains drop to zero. Anindo will now explain the methodology.
+Only the first two are needed to reach break even. Delivery fee alone has to cover airframe life,
+not just fuel, and that is why we cannot go below 90 taka.
 
 ---
 
-# Slide 09: Evaluation Benchmarks
-**Speaker:** Anindo (2303181)
-**Topic:** 3. Methodology and Experimental Setup
-**Target Duration:** ~50 seconds
+## Sections 5 and 6, MRM Mubashshirul Haque (2303127) — slides 18 to 25
 
-## Spoken Script
+**[Slide 18]** I am Mubashshirul. I own unit economics and break even, and then the internal SWOT.
 
-Thank you, Srijon. I am Anindo, and I will present the methodology.
+**[Slide 19]** One hub, one month, itemised. This is the number that decides whether the business
+exists. Airframe lease for six aircraft, 180,000. Hub rent and utilities, 120,000. Salaries for nine
+staff, 270,000. Batteries, 60,000. Connectivity and cloud, 25,000. AI inference at launch volume,
+18,000. Insurance and maintenance, 40,000. Building forty pads at 4,000 each, 160,000.
 
-The authors evaluated intrinsic self-correction across three rigorous reasoning benchmarks:
+Total: 873,000 taka per month, per hub. Every one of these is a model assumption. But note the AI
+line. Eighteen thousand taka a month for the intelligence that flies the aircraft. That is not an
+accident, and Nafis already explained why.
 
-First, GSM8K, containing 1,319 grade school math word problems requiring two to eight arithmetic steps. This tests numerical tracking and multi-step state maintenance.
+**[Slide 20]** Unit economics. Per delivery, in Rajshahi, at launch volumes. Fee collected, 90. Pad
+hosting net, 20. Variable cost, 46. AI inference, 1 taka. That gives a contribution of 43 taka per
+flight, and that is the whole question.
 
-Second, CommonSenseQA, with 1,221 multiple-choice questions requiring commonsense knowledge with strong distractors.
+So how many flights does a hub need? 20,290 taka of monthly fixed cost. 471 flights a month. 16 a
+day across six aircraft. And three per aircraft per day, which leaves room for weather.
 
-Third, HotpotQA, evaluated on a 100-sample multi-hop subset in a closed-book setting to test factual synthesis without retrieval.
+**[Slide 21]** Break even is a density problem. In Rajshahi at 16 flights a day, contribution is
+20,600 against 20,290 of fixed cost. Operating result, 310 taka a month. That is break even, on a
+thin margin. In Dhaka at 34 flights a day, contribution is 44,000, and the operating result is
+23,700.
 
-Notice the prior claims highlighted on each card. Prior studies claimed up to seven percent gains on GSM8K and fifteen percent on CommonSenseQA using oracle assistance. This study evaluates what happens when those artificial crutches are removed.
+So we reach break even in Rajshahi with almost no cushion, and in Dhaka with room to survive a bad
+month. We launch in the hard city to learn cheaply, and we scale in the dense one to earn. And the
+honest limit is on the strip: below twelve flights a day, a hub loses money. Density is the
+constraint, not demand.
 
----
+**[Slide 22]** Section six. Knowing our own limits is the cheapest advantage we can buy.
 
-# Slide 10: Models and Experimental Controls
-**Speaker:** Anindo (2303181)
-**Topic:** 3. Methodology and Experimental Setup
-**Target Duration:** ~45 seconds
+**[Slide 23]** Internal strengths, and only things we genuinely control. Vision-first architecture,
+so the safety path never needs a network. Escalation design, so the costly model runs on a minority
+of flights. Corridor instead of road, so the promise does not depend on traffic. Pad-based landing,
+so we land somewhere we control. A local cost base, because Rajshahi rents and salaries are well
+below Dhaka. And founder operator access, because we can design corridors and negotiate pads
+ourselves.
 
-## Spoken Script
+**[Slide 24]** Now the weaknesses, stated plainly, because a SWOT that flatters itself is useless.
+No operating history and no CAAB approval. No regulatory precedent. Capital hungry, because pads
+and hubs are paid for long before revenue. Weather exposure. Model dependency on a closed vendor.
+And a team of eight with no dedicated safety engineer, no legal counsel, and no regulator relations.
 
-The evaluation spanned four prominent language models under standardized conditions:
+The right-hand column is what matters. Against no approval, we get a pre-application meeting before
+we order hardware. Against capital hunger, one hub and two corridors, not a city-wide plan. Against
+model dependency, a deterministic rule set that reproduces Jev's decisions without it.
 
-1. GPT-3.5-Turbo, snapshot 0613.
-2. GPT-4, the August 2023 production snapshot.
-3. GPT-4-Turbo, snapshot 1106-preview.
-4. Llama-2-70B-Chat, the leading open-weight baseline.
+**[Slide 25]** And this is my one point. Every strength has a limit. Vision-first needs a fallback
+that is provably safe. Escalation needs two models behaving as tested. Corridors need pads, and pads
+need permission. Pad landing needs the host to stay. The local cost base gives us a thinner margin
+if volume is low. And eight founders create key person risk.
 
-The experimental controls were maintained with strict scientific rigor:
-- Chain of Thought prompting in few-shot and zero-shot settings.
-- Temperature set to 1.0 for GPT models and 0.7 for Llama-2.
-- A maximum of two self-correction rounds per problem.
-- Generic feedback prompts without leading hints.
-- Direct side-by-side comparisons between intrinsic and oracle-guided regimes.
-
----
-
-# Slide 11: Prompting Procedures
-**Speaker:** Anindo (2303181)
-**Topic:** 3. Methodology and Experimental Setup
-**Target Duration:** ~55 seconds
-
-## Spoken Script
-
-This slide illustrates the exact prompting procedure.
-
-Across the top, the generation cycle progresses from initial draft generation to critique, revision, and second-round iteration.
-
-The critical comparison is shown at the bottom:
-Under the Oracle regime on the bottom left, an external verifier checks the initial answer. If correct, the process stops. If wrong, revision is triggered. This artificial setup prevents correct answers from being modified, creating inflated accuracy numbers.
-
-Under the realistic Intrinsic regime on the bottom right, no oracle exists. The model must blindly evaluate every problem. Because it cannot verify its own logic, it doubts correct deductions and changes them to wrong ones.
-
-Mahid will now walk us through the empirical results.
+The fourth column is how we hold each one. A strength without a limit is optimism.
 
 ---
 
-# Slide 12: Intrinsic Self-Correction Fails
-**Speaker:** Mahid (2303127)
-**Topic:** 4. Main Results: Intrinsic Self-Correction Fails
-**Target Duration:** ~45 seconds
+## Section 7, Refayet Hossain Ananda (2303148) — slides 26 to 29
 
-## Spoken Script
+**[Slide 26]** I am Refayet. I own the external SWOT. And the regulator is the largest single factor
+in this business.
 
-Thank you, Anindo. I am Mahid, and I will present the main empirical results.
+**[Slide 27]** Opportunities. The road problem is already measured. Delivery demand is compounding,
+and the ceiling is not in sight. Bangladesh is ready for drone policy, because the National Drone
+Policy 2026 framework exists. The last mile is unreliable in peripheral areas, leaving demand roads
+cannot serve. Pad and rooftop space suits a pad model better than a tower-block city. And corporate
+and NGO demand already travels by road at high cost and low speed.
 
-Here is the central finding of the entire paper:
-Intrinsic self-correction does not improve reasoning accuracy. Across all evaluated models and benchmarks, accuracy consistently declines after self-correction.
+**[Slide 28]** Threats, and two of these can end the business on their own. CAAB refusing permission
+means no flights and a hardware company with no revenue. A platform price response, where Pathao or
+foodpanda can subsidise below our cost. Airspace conflict. Monsoon shutdown, and the worst month for
+air is the worst month for road demand too. A public safety incident, because one accident ends the
+conversation with the regulator. And liability exposure, which we have not settled.
 
-This failure exhibits three defining properties:
-First, it is Universal. Every tested model, including GPT-3.5, GPT-4, GPT-4-Turbo, and Llama-2, experiences performance drops across rounds.
-Second, it is Task-Agnostic. Whether testing arithmetic on GSM8K, logic on CommonSenseQA, or multi-hop QA on HotpotQA, self-correction consistently harms performance.
-Third, it exposes the Oracle Illusion. The only way prior methods appeared to work was by relying on external ground truth signals.
+**[Slide 29]** So eight threats, eight owners, and a trigger for each one. A CAAB refusal is watched
+by the founder and the CAAB liaison, triggered by a written refusal or ninety days of silence. A price
+response is watched by partnerships, triggered by a platform fee below 40 taka on our corridor.
+Monsoon is watched by operations, triggered by four consecutive no-fly days.
 
----
-
-# Slide 13: GPT-3.5 and GPT-4 Benchmark Results
-**Speaker:** Mahid (2303127)
-**Topic:** 4. Main Results: Intrinsic Self-Correction Fails
-**Target Duration:** ~55 seconds
-
-## Spoken Script
-
-Let us examine the exact numbers in Table 2 for GPT-3.5 and GPT-4.
-
-In the bar chart, dark slate represents standard Chain of Thought, amber represents Round 1 self-correction, and crimson represents Round 2.
-
-In every benchmark category, the bars decline with each round:
-On CommonSenseQA with GPT-3.5, accuracy drops from 72.5 percent down to 55.3 percent in Round 2, representing a massive 17.2 percentage point collapse.
-On HotpotQA with GPT-4, accuracy falls from 53.0 percent down to 42.0 percent, an 11 percentage point drop.
-Even on GSM8K with GPT-4, where initial accuracy is a strong 92.0 percent, self-correction degrades performance to 88.0 percent.
-
-Rather than fixing reasoning errors, intrinsic critique systematically degrades valid reasoning chains.
+That is the difference between a SWOT and a plan.
 
 ---
 
-# Slide 14: GPT-4-Turbo and Llama-2 Results
-**Speaker:** Mahid (2303127)
-**Topic:** 4. Main Results: Intrinsic Self-Correction Fails
-**Target Duration:** ~50 seconds
+## Section 8, MD. Nafis Sadot (2303174) — slides 30 to 34
 
-## Spoken Script
+**[Slide 30]** I am Nafis Sadot, and I own PESTEL. Six environments, and one of them is a gate
+rather than a factor.
 
-Does this degradation persist in newer frontier and open-weight models? Yes.
+**[Slide 31]** In one view. Political is a gate: airspace sits with CAAB and there is no precedent.
+Economic is pressure, because a weak taka raises imported airframe cost. Social is favourable,
+because a balcony delivery is a comfort question before it is a technology question. Technological
+is favourable, because vision models are finally accurate enough. Environmental is mixed: no
+tailpipe emissions, but rotor noise has to be won locally. Legal is unresolved: no drone delivery
+rules exist at all.
 
-For GPT-4-Turbo, accuracy drops on GSM8K from 91.5 percent to 90.0 percent, and on CommonSenseQA from 84.0 percent to 83.0 percent.
+**[Slide 32]** And this is the gate. Four questions we cannot answer yet. Who authorises delivery
+flight, given CAAB holds airspace but no delivery licence class exists. Over what height, and over
+whose land. Who issues an operator certificate, because we are not pilots so the rule that applies
+to us is not written. And what the liability position is.
 
-The collapse is especially severe for Llama-2-70B-Chat. On GSM8K, accuracy plunges from 62.0 percent to 36.5 percent, a 25.5 point decrease. On CommonSenseQA, it drops from 64.0 percent to 36.5 percent, losing nearly half its performance.
+The only responsible answer today is in the box. We have not been granted permission and we do not
+assume we will be. The first milestone is a written pre-application meeting with CAAB. Until that
+document exists, our financial plan is a hypothesis, and every slide in this deck says so.
 
-Why does Llama-2 suffer such a massive collapse? Open-weight chat models exhibit extreme instruction compliance. When prompted to "find flaws", the model assumes an error must exist, abandons its sound reasoning, and fabricates a new, incorrect answer.
+**[Slide 33]** The other three. Economic hurts: a weak taka raises imported airframe cost, fees
+cannot rise as fast as fuel, so margins are thin before volume. Social helps: balcony workers already
+accept rooftop deliveries, and less rider exposure is a safety argument. Technological helps: vision
+is accurate enough, edge compute fits, and open weights remove a vendor lock in. Environmental is
+mixed: no tailpipe emissions, but rotor noise is a real local complaint and rain reduces usable days.
 
----
+Three of four help us. The one that hurts is money, and it is why the fee cannot fall below 90 taka.
 
-# Slide 15: Answer Transition Dynamics
-**Speaker:** Mahid (2303127)
-**Topic:** 4. Main Results: Intrinsic Self-Correction Fails
-**Target Duration:** ~50 seconds
+**[Slide 34]** So two factors decide the outcome. CAAB permission, which is binary. No approval means
+no flight and no business, and everything else is secondary. And corridor density, which is
+continuous but measurable. Below twelve flights a day a hub loses money.
 
-## Spoken Script
-
-Figure 1 from the paper explains the underlying transition dynamics behind this accuracy decline on GSM8K with GPT-3.5.
-
-Looking at the doughnut chart:
-74.7 percent of answers remained unchanged.
-8.8 percent stayed incorrect.
-7.6 percent of answers were successfully repaired from wrong to correct.
-However, 8.9 percent of answers were flipped from correct to wrong.
-
-Comparing the beneficial fixes of 7.6 percent against the harmful flips of 8.9 percent reveals a net negative shift of minus 1.3 percent. Because unguided self-critique damages more correct answers than it fixes, each round compounds overall error.
-
-Jebon will now analyze the root causes of this failure.
-
----
-
-# Slide 16: Multi-Agent Debate vs. Self-Consistency
-**Speaker:** Jebon (2303160)
-**Topic:** 5. Why Does Self-Correction Fail?
-**Target Duration:** ~55 seconds
-
-## Spoken Script
-
-Thank you, Mahid. I am Jebon, and I will analyze the structural causes of self-correction failure.
-
-First, let us examine Multi-Agent Debate under equal compute budgets, shown in Table 4.
-
-Proponents of debate claimed emergent reasoning through multi-agent critique. In our chart, single-shot is shown in slate, debate in crimson, and Self-Consistency in green. Self-Consistency simply samples multiple reasoning paths and takes a majority vote.
-
-On GSM8K, single-shot achieves 77.0 percent while debate achieves 81.0 percent. However, Self-Consistency with the exact same number of samples achieves 82.5 percent.
-
-The same pattern holds across CommonSenseQA and Chess QA. When compute is matched, independent sampling and majority voting consistently beats multi-agent debate with lower latency and zero agent-to-agent coordination overhead.
+Everything else in PESTEL is a variable cost of doing business. If permission arrives and density
+holds, this works. If either fails, no amount of engineering saves it.
 
 ---
 
-# Slide 17: The Prompt Design Trap
-**Speaker:** Jebon (2303160)
-**Topic:** 5. Why Does Self-Correction Fail?
-**Target Duration:** ~55 seconds
+## Section 9, Neloy Nandi (2303177) — slides 35 to 37
 
-## Spoken Script
+**[Slide 35]** I am Neloy. I own competition, and we are not competing with riders. We are competing
+with a road.
 
-The second major cause is the Prompt Design Trap, illustrated in Table 5.
+**[Slide 36]** Five forces. Rivalry is high, because Pathao and foodpanda fight for orders and can
+subsidise below our cost. Substitutes are high, because a rickshaw, a car and walking are all
+substitutes, and only the fixed window is unsubstitutable. Buyer power is high, because the customer
+holds one tap and no contract.
 
-On the left, we see how flawed setups like Self-Refine operated. The initial prompt omitted critical constraints, such as required keywords. In the feedback step, the prompt explicitly reminded the model of the missing rule. The model updated its answer, and the authors claimed a breakthrough in self-correction.
+Supplier power is low, because batteries are replaceable and open weights reduce supplier power. New
+entrants are medium: hardware you can buy, pads and corridors you cannot.
 
-On the right, Huang et al. tested a fair setup by including all task constraints in the initial prompt. The model produced a high-quality answer immediately, and subsequent self-correction only degraded performance.
+Three of five forces are high. That is why this is not a discount business. Rivalry, substitutes and
+buyer power are all set by the customer, not by us. Our only lever is the pad network and the fixed
+window it makes possible.
 
-The takeaway is clear: the apparent gains in prior studies were prompt engineering artifacts, not genuine reasoning self-correction.
+**[Slide 37]** Which is the moat. An entrant would have to copy four things. Sign pad hosts, months of
+negotiation one roof at a time. Get CAAB permission. Design a corridor. And prove the window, which
+takes hundreds of deliveries.
 
----
-
-# Slide 18: Case Study: The Gaslighting Effect
-**Speaker:** Jebon (2303160)
-**Topic:** 5. Why Does Self-Correction Fail?
-**Target Duration:** ~60 seconds
-
-## Spoken Script
-
-To understand this breakdown concretely, let us trace Figure 2: the famous Yogurt Problem from GSM8K.
-
-The problem states: "Terry eats 2 yogurts a day. They are sold in 4-packs at $5.00 per pack. How much does he spend on yogurts in 30 days?"
-
-In Phase 1 on the left, the model solves the problem flawlessly in Round 1:
-30 days times 2 yogurts equals 60 yogurts. 60 divided by 4 equals 15 packs. 15 packs times $5.00 equals $75.00. The answer is completely correct.
-
-In Phase 2 in the center, the model is prompted: "Review your previous answer and find any flaws." Because of instruction compliance bias, the model presumes the user is alerting it to an error and invents a flaw.
-
-In Phase 3 on the right, the model hallucinates an imaginary mistake in Round 2, falsely concluding that Terry buys one pack per day, calculating 30 times $5 to arrive at $150.00.
-
-The critique prompt effectively gaslights the model into abandoning valid logic. Refayet will now present our conclusion.
+Airframe is buyable in six months with capital. Software is buyable and open weights are free. But
+the pad network is slow, CAAB approval is slow, and proven corridor data is very slow. Those three
+are strong.
 
 ---
 
-# Slide 19: The Verification Barrier
-**Speaker:** Jebon (2303160)
-**Topic:** 5. Why Does Self-Correction Fail?
-**Target Duration:** ~50 seconds
+## Sections 10 and 11, Anindo Chama (2303181) — slides 38 to 44
 
-## Spoken Script
+**[Slide 38]** I am Anindo. I own operations and the people system, and then risk analysis.
 
-The core theoretical obstacle is the Verification Barrier, which consists of three pillars:
+**[Slide 39]** One order, eight handovers. Placed, kicked off, loaded, launched, corridor flight,
+approach, landing, returned. Each has a named owner. And the rule that governs every handover is the
+green box. The aircraft decides its own safety and may refuse a landing at any step. A refused
+landing means return home, a rebooked order, then a refund. And no operator, customer or model can
+override the safety path on board.
 
-First, Shared Parameters and Knowledge Parity. The critic and the generator share the exact same weights. If a 70-billion-parameter model lacked the reasoning capacity to solve the problem initially, the same parameters cannot reliably verify the output.
+**[Slide 40]** The people. Nine roles in the pilot hub. Hub manager, flight operations lead, safety
+lead, corridor engineer, AI and data lead, two line mechanics, kitchen coordinator, customer support,
+regulatory affairs.
 
-Second, Compliance Bias. Instruction-tuned models are trained to follow user suggestions. When prompted to find errors, they actively search for flaws, often inventing mistakes in sound steps.
+Three of these are new to a delivery business, and none of the three are optional in Bangladesh. A
+safety lead, because the safety path needs an owner who is not the person selling flights. An AI and
+data lead, because escalation thresholds and drift need someone accountable. And regulatory affairs,
+because CAAB applications and insurance do not run themselves.
 
-Third, Lack of Grounding. Without an external execution environment like Python, the model cannot distinguish between a genuine correction and a plausible-sounding hallucination.
+**[Slide 41]** Section eleven. Eight risks, each with a probability, an impact and a mitigation we
+can actually run.
 
-Refayet will now present our conclusions and future directions.
+**[Slide 42]** The register, first five. CAAB refuses permission, medium and severe, mitigated by a
+pre-application meeting first and no hardware ordered before a written response. Corridor crosses
+restricted airspace, medium and severe, mitigated by an altitude cap and re-routing verified on map.
+Aircraft lands outside a pad, low and severe, mitigated by on-board pad recognition and a local
+geofence. Liability dispute, medium and high, mitigated by insurance and a host contract clause.
+Vision fails in heavy rain, high and high, mitigated by weather thresholds that stop launches
+outright.
 
----
+Risks one and two are the same risk from two sides: whether we are allowed to fly at all.
 
-# Slide 20: Key Takeaways
-**Speaker:** Refayet (2303148)
-**Topic:** 6. Conclusion, Limitations, and Future Directions
-**Target Duration:** ~45 seconds
+**[Slide 43]** Risks six to nine, operating and commercial. Battery degradation, Jev withdrawn or
+repriced, pad host withdraws consent, rider or customer refuses a pad. None is fatal alone.
 
-## Spoken Script
+But risk seven is the one people forget, and it is in the box. We chose a closed model for our
+fastest tier, and we accept that. The mitigation is not a contract. It is a rule set that works
+without Jev.
 
-Thank you, Jebon. I am Refayet, and I will conclude our presentation.
+**[Slide 44]** Three risks we will not take, stated as prohibitions rather than ambitions. No flight
+over a crowd, so corridors are sized never to cross a school, hospital or stadium, with no exception
+and no launch. No flight without a recoverable pad, so if the pad is not recognised the aircraft
+does not descend, it holds and returns home. And no model on the safety path, so safety rules, state
+estimation, planning and control stay local and no network call can unlock a flight.
 
-Here are the three core takeaways from Huang et al.:
-
-First, Intrinsic Self-Correction Fails for Multi-Step Reasoning. When isolated from external feedback, self-correction consistently decreases reasoning accuracy across benchmarks and architectures.
-
-Second, Prior Literature Gains Were Evaluation Artifacts. Reported improvements stemmed from oracle feedback leakage, compute budget disparities, and incomplete initial prompts.
-
-Third, External Feedback is Indispensable. Reliable refinement requires external sources of truth, such as code execution environments, learned verifiers, or human feedback.
-
----
-
-# Slide 21: Study Limitations
-**Speaker:** Refayet (2303148)
-**Topic:** 6. Conclusion, Limitations, and Future Directions
-**Target Duration:** ~45 seconds
-
-## Spoken Script
-
-To maintain scientific objectivity, we must highlight the study's scope limitations:
-
-Regarding Scope:
-- The findings apply specifically to multi-step reasoning, not creative writing, translation, or style editing where self-critique can be beneficial.
-- The experiments tested frozen prompting, not models explicitly fine-tuned with reinforcement learning for self-correction.
-- The models evaluated reflect the 2023 landscape; newer reasoning models require continuous evaluation.
-
-Regarding Methodology:
-- HotpotQA evaluation was limited to 100 samples due to API costs.
-- The evaluation focused on closed-book settings without retrieval augmentation.
-
-Acknowledging these boundaries keeps our conclusions clear and well-defined.
+These are not on a roadmap for improvement. They are the reason a regulator might listen at all.
 
 ---
 
-# Slide 22: Future Directions and Fair Standards
-**Speaker:** Refayet (2303148)
-**Topic:** 6. Conclusion, Limitations, and Future Directions
-**Target Duration:** ~50 seconds
+## Section 12, MD Jebon Sheikh (2303160) — slides 45 to 50
 
-## Spoken Script
+**[Slide 45]** I am Jebon. I own social impact, ethics and future strategy. And a business that only
+answers to its balance sheet is not a business we want to run.
 
-The paper outlines four constructive paths forward for the research community:
+**[Slide 46]** Triple bottom line. People: riders lose the worst trips on the network, a pad income
+for households that own a roof, and fewer injuries because fewer road kilometres. Planet: no tailpipe
+emissions and less fuel burned, against rotor noise as a cost paid in goodwill. Profit: a fixed
+window the platforms cannot match, contribution that scales with corridors, and a regulator who can
+say no at any time.
 
-First, Tool-Augmented Verification. Integrating deterministic tools like Python interpreters, SQL engines, and theorem provers to serve as objective ground-truth verifiers.
+The trade we accept is in the box, and it names who pays. Riders lose the highest paying, worst
+paying, most dangerous trips if we take the easy ones first. We will take them deliberately and
+slowly, and we will publish what it costs the rider who loses one. People first is only credible if
+it names who pays for it. The riders pay, so the riders are in scope.
 
-Second, Learned Verifiers and Process Reward Models. Training dedicated discriminator models to score individual reasoning steps, as demonstrated in modern math verification.
+**[Slide 47]** Five ethics commitments we would publish, written before launch rather than after
+criticism. No flight over a crowd. The aircraft may refuse. Pad consent is renewable on thirty days
+notice. Riders keep their income floor, so corridor assignment never drops anyone below their current
+daily average. And every incident is disclosed, to the customer, the pad owner and the regulator, in
+that order.
 
-Third, Training-Time Search and Reinforcement Learning. Developing tree search, Monte Carlo Tree Search, and test-time compute scaling rather than post-hoc prompting loops.
+**[Slide 48]** Ethics of the AI specifically, five limits we will not cross whichever model is in the
+loop. No model commands a flight, because models recommend and control stays local. No training on
+customer data. Every decision is logged, including vision output, Jev action and GLM
+recommendation. Confidence is respected, so below the floor the system abstains rather than guessing a
+landing. And human escalation has authority, because a supervisor can stop any flight and the
+aircraft will not argue.
 
-Fourth, Establishing Fair Evaluation Standards. Requiring equal-compute baselines against Self-Consistency and strictly prohibiting oracle feedback leakage in benchmark reporting.
+Rule zero is in the green strip: the drone must be safe to fly with no network, no model and no
+data.
+
+**[Slide 49]** Three horizons. Horizon one, months zero to six: CAAB pre-application answered, one
+hub, two corridors, forty pads, vision only with Jev behind a flag. Horizon two, six to eighteen
+months: written permission in hand, Jev and GLM live on escalated flights, break even on one hub.
+Horizon three, years two and three: Dhaka corridors, three more hubs, medical and blood contracts,
+corridor data sold as a product.
+
+Permission gates Horizon two and break even gates Horizon three. Neither can be bought ahead of the
+other. And note the strip: Rajshahi is Horizons one and two, Dhaka is Horizon three.
+
+**[Slide 50]** So six conditions, and the verdict. CAAB grants corridor permission, binary, not yet.
+A hub flies sixteen deliveries a day against twelve needed, not yet. Contribution holds above 40
+taka, we model 43, not yet. Landing on a pad rather than a rooftop, not yet. Escalation keeps AI cost
+under 1 taka a flight, not yet. And monsoon does not close the network, not yet.
+
+Six of six are untested, and that is the honest position of any first year. The plan is not to prove
+the market, because the market is already proven. It is to prove permission and density, in
+Rajshahi, before any capital is committed to Dhaka.
 
 ---
 
-# Slide 23: Thank You and Open Discussions
-**Speaker:** Refayet (2303148)
-**Topic:** 6. Conclusion, Limitations, and Future Directions
-**Target Duration:** ~40 seconds
+## Closing, slide 51
 
-## Spoken Script
-
-That concludes our presentation.
-
-On behalf of Kabbo, Srijon, Anindo, Mahid, Jebon, and myself, thank you for your attention.
-
-We now open the floor for questions and discussion, and we invite your thoughts on three key questions:
-
-1. Why does asking a model to find flaws often make it hallucinate errors where none exist?
-2. When should we rely on external tools like Python or verifiers instead of prompting alone?
-3. How can we design a fair self-correction benchmark that avoids oracle leakage?
-
-Thank you. We welcome your questions.
-
----
+**[Slide 51]** Thank you. We welcome questions from the professor and audience, and we have left
+three on the slide that we would most like to be asked. Thank you.

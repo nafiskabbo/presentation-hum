@@ -1,0 +1,82 @@
+[
+ {
+  "key": "hero_package_drop",
+  "file": "hero_package_drop.jpg",
+  "commons_title": "Zipline-package-drop.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Roksenhorn",
+  "page": "https://commons.wikimedia.org/wiki/File%3AZipline-package-drop.jpg"
+ },
+ {
+  "key": "drone_launch",
+  "file": "drone_launch.jpg",
+  "commons_title": "Zipline Drone Launch.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "Roksenhorn",
+  "page": "https://commons.wikimedia.org/wiki/File%3AZipline_Drone_Launch.jpg"
+ },
+ {
+  "key": "dhaka_traffic",
+  "file": "dhaka_traffic.jpg",
+  "commons_title": "Traffic jam, Tejgaon, Dhaka, Bangladesh.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "FahimHP",
+  "page": "https://commons.wikimedia.org/wiki/File%3ATraffic_jam%2C_Tejgaon%2C_Dhaka%2C_Bangladesh.jpg"
+ },
+ {
+  "key": "dhaka_traffic2",
+  "file": "dhaka_traffic2.jpg",
+  "commons_title": "Traffic Jam, New Market, Dhaka (2402764792).jpg",
+  "license": "CC BY-SA 2.0",
+  "author": "joiseyshowaa",
+  "page": "https://commons.wikimedia.org/wiki/File%3ATraffic_Jam%2C_New_Market%2C_Dhaka_%282402764792%29.jpg"
+ },
+ {
+  "key": "dhaka_aerial",
+  "file": "dhaka_aerial.jpg",
+  "commons_title": "Drone view of Kuril Flyover Highway areas in Dhaka City.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "IbnSina20",
+  "page": "https://commons.wikimedia.org/wiki/File%3ADrone_view_of_Kuril_Flyover_Highway_areas_in_Dhaka_City.jpg"
+ },
+ {
+  "key": "dhaka_rooftop",
+  "file": "dhaka_rooftop.jpg",
+  "commons_title": "Modern residential building with terraced rooftops at Mugda in Dhaka.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "A S M Jobaer",
+  "page": "https://commons.wikimedia.org/wiki/File%3AModern_residential_building_with_terraced_rooftops_at_Mugda_in_Dhaka.jpg"
+ },
+ {
+  "key": "monsoon_road",
+  "file": "monsoon_road.jpg",
+  "commons_title": "Rain water cover road at Dhaka,2014.jpg",
+  "license": "CC BY-SA 3.0",
+  "author": "Aashaa",
+  "page": "https://commons.wikimedia.org/wiki/File%3ARain_water_cover_road_at_Dhaka%2C2014.jpg"
+ },
+ {
+  "key": "rajshahi_aerial",
+  "file": "rajshahi_aerial.jpg",
+  "commons_title": "Aerial view of rajshahi.jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "RockyMasum",
+  "page": "https://commons.wikimedia.org/wiki/File%3AAerial_view_of_rajshahi.jpg"
+ },
+ {
+  "key": "rajshahi_city",
+  "file": "rajshahi_city.jpg",
+  "commons_title": "Rajshahi city (3).jpg",
+  "license": "CC BY-SA 4.0",
+  "author": "RockyMasum",
+  "page": "https://commons.wikimedia.org/wiki/File%3ARajshahi_city_%283%29.jpg"
+ },
+ {
+  "key": "slide_one_hero",
+  "file": "slide_one_hero.png",
+  "source": "supplied by the client for the AeroSetu title slide",
+  "license": "Client supplied",
+  "author": "Client supplied",
+  "note": "Not a Wikimedia Commons photograph, so no licence line and no on-slide credit caption."
+ }
+]

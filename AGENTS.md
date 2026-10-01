@@ -6,12 +6,13 @@ The full project brief lives in **`requirement.md`** at the repo root. Read it c
 before doing any work in this repo. It is the single source of truth and it already
 contains everything, so you do not need to be told the task again.
 
-- Project: **Vision-Guided Drone Food Delivery**, a business analysis for a Bangladesh
-  (Dhaka focused) humanities group presentation.
-- Group size: 8 presenters, 8 sections, one framework per section.
-- `requirement.md` holds the topic, the presenter to section mapping, the required
-  frameworks, the design and palette rules, the speech script rules, the media and
-  animation rules, the prompt hand off format, the quality check, and the versioning and
+- Project: **AeroSetu**, a vision and AI powered drone delivery business analysis for a
+  Bangladesh humanities group presentation. Food delivery is the first market, not the only one.
+- 51 slides, 8 presenters, **12 sections**, 8 frameworks. Four presenters hold two sections each.
+- `requirement.md` holds the name and branding rules, the Vision to Jev to GLM escalation
+  requirement, the Rajshahi-first geography argument, the twelve section and presenter mapping,
+  the palette and font sizes, the header, footer and slide numbering rules, the real photograph
+  sourcing rules, the motion approach, the speech rules, the quality check, and the versioning and
   file naming conventions.
 
 ## Standing rules
@@ -22,39 +23,62 @@ contains everything, so you do not need to be told the task again.
    in one line before building. Only ask the user when two readings would produce
    materially different work.
 3. Never touch the existing LLM Self Correction files in `output/` and `speeches/`. The
-   drone deck is a new versioned artifact, named exactly as `requirement.md` section 5
+   drone deck is a new versioned artifact, named exactly as `requirement.md` section 10
    specifies.
 4. Use the skills the brief names: `pptx` for the deck, `frontend-design` and
    `design-taste-frontend` for visual direction, `unslop` for all copy and the speech.
-5. Run the quality check in `requirement.md` section 10 before reporting anything as done,
+5. Run the quality check in `requirement.md` section 13 before reporting anything as done,
    and report the results rather than claiming success.
-6. Keep writing rules from the brief even when they feel strict: no em dashes or en
-   dashes, no raw URLs in the deck body, cite every figure, label unsourced numbers as
-   Model assumption, and never invent a source.
+6. Three non negotiable design rules, because they have been corrected before: **white
+   background only, no dark slides at all**, **12 pt absolute font floor with no exceptions**,
+   and **real licensed photographs rather than AI generated imagery**.
 
 ## What to do when
 
-- **"Make the deck", "build the slides", "start the presentation"**: follow
-  `requirement.md` sections 3, 4, 5, 7, 8, then run section 10.
-- **"Add animations / motion / video"**: follow section 8, and be honest that native
+- **"Make the deck", "build the slides"**: follow `requirement.md` sections 4, 5, 6, 7, 9, 10,
+  then run section 13.
+- **"Add animations / motion / video"**: follow section 12, and be honest that native
   PowerPoint animation timelines are not reliably writable with the current toolchain.
-  Use motion inserts, frame based builds, or validated slide transitions instead.
-- **"Give me the image and video prompts"**: follow the prompt hand off rules in section 8
-  and write `media/asset_prompt_sheet.md`. Also paste the prompts into chat, the user
-  wants to see them directly.
-- **"Write the speech"**: follow section 9 and write `speeches/full_presentation_speech.md`
+- **"Give me the image and video prompts"**: prompts are the fallback for anything the
+  Wikimedia Commons photograph route could not cover. Real photographs remain primary.
+- **"Write the speech"**: follow section 12 and write `speeches/full_presentation_speech.md`
   with one labelled section per presenter.
-- **"New version"**: bump to the next `-vN` suffix, never overwrite.
+- **"New version"**: bump to the next `-vN` suffix, never overwrite. Never recreate the deleted
+  `Drone_Food_Delivery_*` drafts.
 
 ## Repo map
 
 | Path | What it is |
 |---|---|
 | `requirement.md` | The project brief. Authoritative. |
-| `output/` | Generated decks and PDFs. New drone deck goes here. |
+| `build/` | Deck generator source. `generate.js` is the entry point and refuses to build if copy will overflow its box. `slidenum.py` swaps the static counter for a live PowerPoint field after every build. `qa_layout.py` checks a rendered PDF for overflow, collision, undersized text and out of bounds text. `make_motion.py` builds the MP4s. |
+| `output/` | Generated decks. New SkyBhat deck goes here. |
 | `speeches/` | Speech scripts. |
-| `media/` | Image and video assets, prompt sheet, motion brief. Created when needed. |
+| `media/img/` | Nine real photographs, the client supplied `slide_one_hero.png`, and `credits.json` with licences and authors. |
+| `build/v1.pdf` | Rendered PDF of the current deck, used for visual QA. Regenerate, do not commit stale. |
+| `media/motion/` | Generated MP4 motion assets and poster frames. |
 | `.agents/skills/` | The pptx, frontend-design, taste and unslop skills. |
+
+## Local tooling notes
+
+- No LibreOffice and no `pdftoppm` on this machine. Render for visual QA by exporting the
+  deck to PDF through Microsoft PowerPoint over AppleScript (`save ... as save as PDF`,
+  passing the output path as an HFS path string) then rasterising with `pymupdf`.
+- `ffmpeg` and `ffprobe` are available for the motion assets.
+- Build order: `node build/generate.js` then `python3 build/slidenum.py <pptx>`. The second step is
+  not optional, otherwise the page numbers are static text.
+- The build fails on estimated text overflow. If it stops, either shorten the copy or grow the box.
+  Do not raise the font floor or shrink the box to get past it.
+- `build/qa_layout.py` cannot see text that overflows its own card without hitting another block,
+  so the build time estimator in `build/design.js` is the real guard. Run both.
+- Wikimedia Commons images: query `commons.wikimedia.org/w/api.php` for
+  `imageinfo` + `extmetadata`, throttle to roughly one request every three seconds or you
+  will hit HTTP 429.
+- **Quit PowerPoint before rendering.** A stale `~$` lock file from a previous export makes
+  PowerPoint write "The picture can't be displayed" and silently emit a short PDF. Check with
+  `ls output/ | grep '~\$'`, remove the lock, and quit the app.
+- `slide_one_hero.png` is client supplied, not a Wikimedia photograph, so it carries no licence
+  line in `credits.json` and no credit caption on the slide.
 
 ## Communication style
 
