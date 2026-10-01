@@ -48,7 +48,8 @@ Model assumption.
   delivery**. It is the only line that goes in the footer, and it never changes per section.
 - "SkyBhat" must not appear anywhere.
 - "As the crow flies.", "HUMANITIES GROUP PRESENTATION", "8 presenters | 8 frameworks | 47 slides"
-  and similar decorative filler are banned. No eye brow strapline on the title slide.
+  and similar decorative filler are banned. No eye brow strapline on the title slide. Counts of
+  slides, frameworks or presenters never appear on a slide.
 - Trademark and domain availability has **not** been checked. Say so if asked.
 
 ## 4. Technology: vision, Jev and GLM
@@ -115,14 +116,14 @@ are longer relative to our 6 km range and we need a higher density of pad sites 
 
 ## 7. Structure
 
-51 slides: title, overview, twelve section dividers, thirty six content slides, closing.
+47 slides: title, overview, eleven section dividers, thirty four content slides, closing.
 
 - **Slide 1, title.** Big AeroSetu wordmark, the standing descriptor, and a roll call of the eight
   presenters showing their section numbers and names. Nothing else. No strapline, no tagline, no
   "Rajshahi first" box, no counts line. The hero image on the right is `slide_one_hero.png`,
   supplied by the client.
 - **Slide 2, overview.** Title is exactly **Overview**, subtitle is exactly **Presentation
-  outline**. Lists all twelve sections with their framework. The same header treatment is used on
+  outline**. Lists all eleven sections with their framework. The same header treatment is used on
   every page from slide 2 to the end.
 - **Each section opens with a divider** carrying the number, the minimal section title, the
   framework name and one claim the section has to land. Dividers carry **no presenter name and
@@ -164,8 +165,11 @@ are longer relative to our 6 km range and we need a higher density of pad sites 
 
 - **Header, line one: the minimal section title, prefixed with its number**, for example
   `6. Internal strengths and weaknesses`. 14 pt bold, burgundy.
-- **Header, line two: the sub title**, which changes on every page. 30 pt, shrunk a step for long
-  titles so it never wraps into the content.
+- **Header, line two: the sub title**, which changes on every page. 26 pt, shrunk a step for long
+  titles.
+- **The three header bands must never touch.** Fixed positions in inches: section line 0.20 to
+  0.44, page title 0.48 to 1.02, kicker 1.04 to 1.32, content from 1.42. Do not move a band
+  without moving the one below it.
 - **Footer left, low on the slide: `Vision and AI powered drone food delivery`.** Always that
   string. It is not the brand name, not the section title, and it never varies.
 - **Footer right, on the same low line: the page counter written as one unit**, `3/51`, not the
@@ -223,9 +227,9 @@ Report the result of each, do not claim success:
 - **No text below 12 pt**, verified by reading font sizes out of the generated XML.
 - Body text is 14 pt or larger.
 - Footer left shows exactly `Vision and AI powered drone food delivery`.
-- Page counter reads `n/51` as one unit, the number is a live field, and it is confirmed by
+- Page counter reads `n/47` as one unit, the number is a live field, and it is confirmed by
   poisoning the cached values, rendering to PDF and checking PowerPoint recomputed all of them.
-- Slide 2 is titled `Overview` with the subtitle `Presentation outline`, and lists all twelve
+- Slide 2 is titled `Overview` with the subtitle `Presentation outline`, and lists all eleven
   sections.
 - Slide 1 carries the wordmark, the descriptor and the roll call only, with `slide_one_hero.png`
   on the right.
@@ -237,8 +241,11 @@ Report the result of each, do not claim success:
 - All three technology tiers and the escalation order are present.
 - Rajshahi first, Dhaka second, with the honest corridor weakness stated.
 - All eight frameworks appear as purpose built diagrams.
-- SWOT split correctly, internal in Section 6 and external in Section 7.
-- Technology sits in its own Section 3, not smeared across the business and operations sections.
+- SWOT split correctly, internal in Section 7 and external in Section 8.
+- Technology sits in its own Section 3, and the risk argument in its own Section 4, rather than
+  being smeared across the business and operations sections.
+- **Header air is checked:** the section line, the page title and the kicker occupy three separate
+  bands with clear space between them and never touch.
 - Every figure cited, every planning number labelled Model assumption.
 - No em dash or en dash in deck, speech or captions.
 - Risk register has at least eight risks with probability, impact and mitigation.

@@ -8,9 +8,10 @@ contains everything, so you do not need to be told the task again.
 
 - Project: **AeroSetu**, a vision and AI powered drone delivery business analysis for a
   Bangladesh humanities group presentation. Food delivery is the first market, not the only one.
-- 51 slides, 8 presenters, **12 sections**, 8 frameworks. Four presenters hold two sections each.
+- 47 slides, 8 presenters, **11 sections**, 11 frameworks. Srijon, Kabbo and Mubashshirul
+  hold two sections each.
 - `requirement.md` holds the name and branding rules, the Vision to Jev to GLM escalation
-  requirement, the Rajshahi-first geography argument, the twelve section and presenter mapping,
+  requirement, the Rajshahi-first geography argument, the eleven section and presenter mapping,
   the palette and font sizes, the header, footer and slide numbering rules, the real photograph
   sourcing rules, the motion approach, the speech rules, the quality check, and the versioning and
   file naming conventions.

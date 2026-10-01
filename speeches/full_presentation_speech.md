@@ -1,33 +1,30 @@
 # AeroSetu: full presentation speech
 
-Deck: `output/AeroSetu_Group_Presentation-v1.pptx`, 51 slides, 12 sections.
-Timing: about 28 minutes at 140 words per minute. Roughly 4000 spoken words.
-Twelve sections over eight presenters means four people carry two sections each. The heaviest
-load is 6 content slides, the lightest 2, and that spread is deliberate.
-Read the slide number in brackets at the start of each block.
+Deck: `output/AeroSetu_Group_Presentation-v1.pptx`, 47 slides, 11 sections.
+Timing: about 27 minutes at 140 words per minute. Roughly 3800 spoken words.
+Eleven sections over eight presenters: Srijon, Kabbo and Mubashshirul each carry two, the rest
+carry one. Read the slide number in brackets at the start of each block.
 
 ---
 
-## Slide 1, title
+## Slides 1 and 2, opening
 
 **[Slide 1]** Good morning. We are AeroSetu, a vision and AI powered drone food delivery business
-analysis. The roll call on the right is our eight presenters and the sections each of us owns. We
-have split the analysis into twelve sections, so four of us are covering two.
+analysis. The roll call on the right is our eight presenters and the sections each of us owns.
+Eleven sections across eight people, so three of us are covering two.
 
-## Slide 2, overview
-
-**[Slide 2]** This is the shape of the talk. Section one is the problem and the market, section two
-is our value proposition. Section three is the technology, which is the part we are most confident
-about and I will come back to it. Sections four and five are money. Six and seven are the internal
-and external SWOT. Eight is the business environment, nine is competition. Ten and eleven are
-operations and risk, and twelve is impact, ethics and where this goes next.
+**[Slide 2]** This is the shape of the talk. Section one is the problem and the market we enter,
+section two is our value proposition. Section three is the technology, which is the part we are
+most confident about and I will come back to it. Section four is technical safety and navigation
+risk. Sections five and six are the business model and the money. Seven and eight are the internal
+and external SWOT. Nine is competition and the industry landscape. Ten is operations and people.
+Eleven is impact, ethics and where this goes next.
 
 ---
 
 ## Sections 1 and 2, MD Masfie Amin Srijon (2303179) — slides 3 to 9
 
-**[Slide 3]** I am Masfie. I own the first two sections: the problem and the market, and our value
-proposition.
+**[Slide 3]** I am Masfie. I own the first two sections.
 
 **[Slide 4]** AeroSetu flies a corridor, not a route. An order is matched to a landing pad, the
 drone launches from a hub, vision flies it down a corridor to the pad, it lands, and it returns.
@@ -77,7 +74,7 @@ That is exactly why we start small.
 
 ## Sections 3 and 4, Nafis Islam Kabbo (2303180) — slides 10 to 17
 
-**[Slide 10]** I am Nafis. I own technology, and the business model.
+**[Slide 10]** I am Nafis. I own the technology, and technical safety and navigation risk.
 
 **[Slide 11]** This is the slide that matters most in our whole analysis. Vision does the flying. It
 runs on the aircraft, always, and it handles navigation, obstacle detection, corridor following
@@ -117,24 +114,47 @@ fastest tier, and a licence change would force a rebuild.
 The decision in one line: one vendor we own, because we can host and fork GLM. One vendor we rent,
 because Jev is fast and cheap but closed.
 
-**[Slide 14]** And this is how escalation works as an operating procedure. Vision only when the
-obstacle is clear, the pad is free and weather is inside limits. That always happens on board.
-Vision to Jev when the pad is occupied, the approach is degraded, or confidence is below the floor.
-That is most decisions. Jev to GLM when the case is ambiguous or unlike training. That is rare. And
-the safety path, when any hard limit is crossed or the link is lost, is a deterministic return. That
-is never escalated.
+**[Slide 14]** Section four, technical safety and navigation risk. A risk without an owner and a
+trigger is only a worry.
 
-Escalation is a cost control and a safety control at once.
+**[Slide 15]** The register, first five. CAAB refuses permission, medium and severe, mitigated by a
+pre-application meeting first and no hardware ordered before a written response. Corridor crosses
+restricted airspace, medium and severe, mitigated by an altitude cap and re-routing verified on map.
+Aircraft lands outside a pad, low and severe, mitigated by on-board pad recognition and a local
+geofence. Liability dispute, medium and high, mitigated by insurance and a host contract clause.
+Vision fails in heavy rain, high and high, mitigated by weather thresholds that stop launches
+outright.
 
-**[Slide 15]** Section four, the business model. The bottom row of the canvas decides whether this
-business exists.
+Risks one and two are the same risk from two sides: whether we are allowed to fly at all.
 
-**[Slide 16]** The Business Model Canvas. I will not read all nine blocks. The three that matter are
+**[Slide 16]** Risks six to nine, operating and commercial. Battery degradation, Jev withdrawn or
+repriced, pad host withdraws consent, rider or customer refuses a pad. None is fatal alone.
+
+But risk seven is the one people forget, and it is in the box. We chose a closed model for our
+fastest tier, and we accept that. The mitigation is not a contract. It is a rule set that works
+without Jev.
+
+**[Slide 17]** Three risks we will not take, stated as prohibitions rather than ambitions. No flight
+over a crowd, so corridors are sized never to cross a school, hospital or stadium, with no exception
+and no launch. No flight without a recoverable pad, so if the pad is not recognised the aircraft
+does not descend, it holds and returns home. And no model on the safety path, so safety rules, state
+estimation, planning and control stay local and no network call can unlock a flight.
+
+These are not on a roadmap for improvement. They are the reason a regulator might listen at all.
+
+---
+
+## Sections 5 and 6, MRM Mubashshirul Haque (2303127) — slides 18 to 24
+
+**[Slide 18]** I am Mubashshirul. I own the business model and revenue, and then unit economics and
+break even.
+
+**[Slide 19]** The Business Model Canvas. I will not read all nine blocks. The three that matter are
 the bottom row. Customer segments is urban households ordering three or more times a week. Cost
 structure is airframes, hubs, pads, staff, insurance, connectivity and AI inference. Revenue is
 delivery fee, subscription, kitchen contract, and later corridor data.
 
-**[Slide 17]** Six revenue streams, and the order matters. Delivery fee at 90 taka, from day one.
+**[Slide 20]** Six revenue streams, and the order matters. Delivery fee at 90 taka, from day one.
 Subscription at 499 a month from month six, and this is the one that changes the maths, because
 five flights a month turns a cost into a habit. Kitchen contract at six to ten percent from month
 nine. Pad hosting at 400 a month from month nine, which pays for the pad on the customer's roof.
@@ -143,13 +163,10 @@ Corporate and NGO in year two. Corridor data in year three.
 Only the first two are needed to reach break even. Delivery fee alone has to cover airframe life,
 not just fuel, and that is why we cannot go below 90 taka.
 
----
+**[Slide 21]** Section six. Tk 43 per flight before hub costs, and everything else is a consequence
+of that number.
 
-## Sections 5 and 6, MRM Mubashshirul Haque (2303127) — slides 18 to 25
-
-**[Slide 18]** I am Mubashshirul. I own unit economics and break even, and then the internal SWOT.
-
-**[Slide 19]** One hub, one month, itemised. This is the number that decides whether the business
+**[Slide 22]** One hub, one month, itemised. This is the number that decides whether the business
 exists. Airframe lease for six aircraft, 180,000. Hub rent and utilities, 120,000. Salaries for nine
 staff, 270,000. Batteries, 60,000. Connectivity and cloud, 25,000. AI inference at launch volume,
 18,000. Insurance and maintenance, 40,000. Building forty pads at 4,000 each, 160,000.
@@ -158,14 +175,14 @@ Total: 873,000 taka per month, per hub. Every one of these is a model assumption
 line. Eighteen thousand taka a month for the intelligence that flies the aircraft. That is not an
 accident, and Nafis already explained why.
 
-**[Slide 20]** Unit economics. Per delivery, in Rajshahi, at launch volumes. Fee collected, 90. Pad
+**[Slide 23]** Unit economics. Per delivery, in Rajshahi, at launch volumes. Fee collected, 90. Pad
 hosting net, 20. Variable cost, 46. AI inference, 1 taka. That gives a contribution of 43 taka per
-flight, and that is the whole question.
+flight.
 
 So how many flights does a hub need? 20,290 taka of monthly fixed cost. 471 flights a month. 16 a
 day across six aircraft. And three per aircraft per day, which leaves room for weather.
 
-**[Slide 21]** Break even is a density problem. In Rajshahi at 16 flights a day, contribution is
+**[Slide 24]** Break even is a density problem. In Rajshahi at 16 flights a day, contribution is
 20,600 against 20,290 of fixed cost. Operating result, 310 taka a month. That is break even, on a
 thin margin. In Dhaka at 34 flights a day, contribution is 44,000, and the operating result is
 23,700.
@@ -175,16 +192,21 @@ month. We launch in the hard city to learn cheaply, and we scale in the dense on
 honest limit is on the strip: below twelve flights a day, a hub loses money. Density is the
 constraint, not demand.
 
-**[Slide 22]** Section six. Knowing our own limits is the cheapest advantage we can buy.
+---
 
-**[Slide 23]** Internal strengths, and only things we genuinely control. Vision-first architecture,
+## Section 7, MD. Nafis Sadot (2303174) — slides 25 to 28
+
+**[Slide 25]** I am Nafis Sadot. I own the internal SWOT. Knowing our own limits is the cheapest
+advantage we can buy.
+
+**[Slide 26]** Internal strengths, and only things we genuinely control. Vision-first architecture,
 so the safety path never needs a network. Escalation design, so the costly model runs on a minority
 of flights. Corridor instead of road, so the promise does not depend on traffic. Pad-based landing,
 so we land somewhere we control. A local cost base, because Rajshahi rents and salaries are well
 below Dhaka. And founder operator access, because we can design corridors and negotiate pads
 ourselves.
 
-**[Slide 24]** Now the weaknesses, stated plainly, because a SWOT that flatters itself is useless.
+**[Slide 27]** Now the weaknesses, stated plainly, because a SWOT that flatters itself is useless.
 No operating history and no CAAB approval. No regulatory precedent. Capital hungry, because pads
 and hubs are paid for long before revenue. Weather exposure. Model dependency on a closed vendor.
 And a team of eight with no dedicated safety engineer, no legal counsel, and no regulator relations.
@@ -193,7 +215,7 @@ The right-hand column is what matters. Against no approval, we get a pre-applica
 we order hardware. Against capital hunger, one hub and two corridors, not a city-wide plan. Against
 model dependency, a deterministic rule set that reproduces Jev's decisions without it.
 
-**[Slide 25]** And this is my one point. Every strength has a limit. Vision-first needs a fallback
+**[Slide 28]** And this is my one point. Every strength has a limit. Vision-first needs a fallback
 that is provably safe. Escalation needs two models behaving as tested. Corridors need pads, and pads
 need permission. Pad landing needs the host to stay. The local cost base gives us a thinner margin
 if volume is low. And eight founders create key person risk.
@@ -202,24 +224,24 @@ The fourth column is how we hold each one. A strength without a limit is optimis
 
 ---
 
-## Section 7, Refayet Hossain Ananda (2303148) — slides 26 to 29
+## Section 8, Refayet Hossain Ananda (2303148) — slides 29 to 32
 
-**[Slide 26]** I am Refayet. I own the external SWOT. And the regulator is the largest single factor
+**[Slide 29]** I am Refayet. I own the external SWOT. And the regulator is the largest single factor
 in this business.
 
-**[Slide 27]** Opportunities. The road problem is already measured. Delivery demand is compounding,
+**[Slide 30]** Opportunities. The road problem is already measured. Delivery demand is compounding,
 and the ceiling is not in sight. Bangladesh is ready for drone policy, because the National Drone
 Policy 2026 framework exists. The last mile is unreliable in peripheral areas, leaving demand roads
 cannot serve. Pad and rooftop space suits a pad model better than a tower-block city. And corporate
 and NGO demand already travels by road at high cost and low speed.
 
-**[Slide 28]** Threats, and two of these can end the business on their own. CAAB refusing permission
+**[Slide 31]** Threats, and two of these can end the business on their own. CAAB refusing permission
 means no flights and a hardware company with no revenue. A platform price response, where Pathao or
 foodpanda can subsidise below our cost. Airspace conflict. Monsoon shutdown, and the worst month for
 air is the worst month for road demand too. A public safety incident, because one accident ends the
 conversation with the regulator. And liability exposure, which we have not settled.
 
-**[Slide 29]** So eight threats, eight owners, and a trigger for each one. A CAAB refusal is watched
+**[Slide 32]** So eight threats, eight owners, and a trigger for each one. A CAAB refusal is watched
 by the founder and the CAAB liaison, triggered by a written refusal or ninety days of silence. A price
 response is watched by partnerships, triggered by a platform fee below 40 taka on our corridor.
 Monsoon is watched by operations, triggered by four consecutive no-fly days.
@@ -228,50 +250,22 @@ That is the difference between a SWOT and a plan.
 
 ---
 
-## Section 8, MD. Nafis Sadot (2303174) — slides 30 to 34
+## Section 9, Neloy Nandi (2303177) — slides 33 to 36
 
-**[Slide 30]** I am Nafis Sadot, and I own PESTEL. Six environments, and one of them is a gate
-rather than a factor.
+**[Slide 33]** I am Neloy. I own competition and the industry landscape. We are not competing with
+riders. We are competing with a road.
 
-**[Slide 31]** In one view. Political is a gate: airspace sits with CAAB and there is no precedent.
-Economic is pressure, because a weak taka raises imported airframe cost. Social is favourable,
-because a balcony delivery is a comfort question before it is a technology question. Technological
-is favourable, because vision models are finally accurate enough. Environmental is mixed: no
-tailpipe emissions, but rotor noise has to be won locally. Legal is unresolved: no drone delivery
-rules exist at all.
-
-**[Slide 32]** And this is the gate. Four questions we cannot answer yet. Who authorises delivery
-flight, given CAAB holds airspace but no delivery licence class exists. Over what height, and over
-whose land. Who issues an operator certificate, because we are not pilots so the rule that applies
-to us is not written. And what the liability position is.
+**[Slide 34]** But before the competition, the industry has no rules yet, and that shapes everything
+else. Four questions we cannot answer. Who authorises delivery flight, given CAAB holds airspace but
+no delivery licence class exists. Over what height, and over whose land. Who issues an operator
+certificate, because we are not pilots so the rule that applies to us is not written. And what the
+liability position is.
 
 The only responsible answer today is in the box. We have not been granted permission and we do not
 assume we will be. The first milestone is a written pre-application meeting with CAAB. Until that
 document exists, our financial plan is a hypothesis, and every slide in this deck says so.
 
-**[Slide 33]** The other three. Economic hurts: a weak taka raises imported airframe cost, fees
-cannot rise as fast as fuel, so margins are thin before volume. Social helps: balcony workers already
-accept rooftop deliveries, and less rider exposure is a safety argument. Technological helps: vision
-is accurate enough, edge compute fits, and open weights remove a vendor lock in. Environmental is
-mixed: no tailpipe emissions, but rotor noise is a real local complaint and rain reduces usable days.
-
-Three of four help us. The one that hurts is money, and it is why the fee cannot fall below 90 taka.
-
-**[Slide 34]** So two factors decide the outcome. CAAB permission, which is binary. No approval means
-no flight and no business, and everything else is secondary. And corridor density, which is
-continuous but measurable. Below twelve flights a day a hub loses money.
-
-Everything else in PESTEL is a variable cost of doing business. If permission arrives and density
-holds, this works. If either fails, no amount of engineering saves it.
-
----
-
-## Section 9, Neloy Nandi (2303177) — slides 35 to 37
-
-**[Slide 35]** I am Neloy. I own competition, and we are not competing with riders. We are competing
-with a road.
-
-**[Slide 36]** Five forces. Rivalry is high, because Pathao and foodpanda fight for orders and can
+**[Slide 35]** Five forces. Rivalry is high, because Pathao and foodpanda fight for orders and can
 subsidise below our cost. Substitutes are high, because a rickshaw, a car and walking are all
 substitutes, and only the fixed window is unsubstitutable. Buyer power is high, because the customer
 holds one tap and no contract.
@@ -283,7 +277,7 @@ Three of five forces are high. That is why this is not a discount business. Riva
 buyer power are all set by the customer, not by us. Our only lever is the pad network and the fixed
 window it makes possible.
 
-**[Slide 37]** Which is the moat. An entrant would have to copy four things. Sign pad hosts, months of
+**[Slide 36]** Which is the moat. An entrant would have to copy four things. Sign pad hosts, months of
 negotiation one roof at a time. Get CAAB permission. Design a corridor. And prove the window, which
 takes hundreds of deliveries.
 
@@ -293,17 +287,17 @@ are strong.
 
 ---
 
-## Sections 10 and 11, Anindo Chama (2303181) — slides 38 to 44
+## Section 10, Anindo Chama (2303181) — slides 37 to 40
 
-**[Slide 38]** I am Anindo. I own operations and the people system, and then risk analysis.
+**[Slide 37]** I am Anindo. I own operations and the people system.
 
-**[Slide 39]** One order, eight handovers. Placed, kicked off, loaded, launched, corridor flight,
+**[Slide 38]** One order, eight handovers. Placed, kicked off, loaded, launched, corridor flight,
 approach, landing, returned. Each has a named owner. And the rule that governs every handover is the
 green box. The aircraft decides its own safety and may refuse a landing at any step. A refused
 landing means return home, a rebooked order, then a refund. And no operator, customer or model can
 override the safety path on board.
 
-**[Slide 40]** The people. Nine roles in the pilot hub. Hub manager, flight operations lead, safety
+**[Slide 39]** The people. Nine roles in the pilot hub. Hub manager, flight operations lead, safety
 lead, corridor engineer, AI and data lead, two line mechanics, kitchen coordinator, customer support,
 regulatory affairs.
 
@@ -312,42 +306,21 @@ safety lead, because the safety path needs an owner who is not the person sellin
 data lead, because escalation thresholds and drift need someone accountable. And regulatory affairs,
 because CAAB applications and insurance do not run themselves.
 
-**[Slide 41]** Section eleven. Eight risks, each with a probability, an impact and a mitigation we
-can actually run.
-
-**[Slide 42]** The register, first five. CAAB refuses permission, medium and severe, mitigated by a
-pre-application meeting first and no hardware ordered before a written response. Corridor crosses
-restricted airspace, medium and severe, mitigated by an altitude cap and re-routing verified on map.
-Aircraft lands outside a pad, low and severe, mitigated by on-board pad recognition and a local
-geofence. Liability dispute, medium and high, mitigated by insurance and a host contract clause.
-Vision fails in heavy rain, high and high, mitigated by weather thresholds that stop launches
-outright.
-
-Risks one and two are the same risk from two sides: whether we are allowed to fly at all.
-
-**[Slide 43]** Risks six to nine, operating and commercial. Battery degradation, Jev withdrawn or
-repriced, pad host withdraws consent, rider or customer refuses a pad. None is fatal alone.
-
-But risk seven is the one people forget, and it is in the box. We chose a closed model for our
-fastest tier, and we accept that. The mitigation is not a contract. It is a rule set that works
-without Jev.
-
-**[Slide 44]** Three risks we will not take, stated as prohibitions rather than ambitions. No flight
-over a crowd, so corridors are sized never to cross a school, hospital or stadium, with no exception
-and no launch. No flight without a recoverable pad, so if the pad is not recognised the aircraft
-does not descend, it holds and returns home. And no model on the safety path, so safety rules, state
-estimation, planning and control stay local and no network call can unlock a flight.
-
-These are not on a roadmap for improvement. They are the reason a regulator might listen at all.
+**[Slide 40]** And this is escalation as an operating procedure, because it belongs with operations
+rather than with the architecture. Vision only when the obstacle is clear, the pad is free and weather
+is inside limits. That always happens on board. Vision to Jev when the pad is occupied, the approach
+is degraded, or confidence is below the floor. That is most decisions. Jev to GLM when the case is
+ambiguous or unlike training. That is rare. And the safety path, when any hard limit is crossed or
+the link is lost, is a deterministic return. That is never escalated.
 
 ---
 
-## Section 12, MD Jebon Sheikh (2303160) — slides 45 to 50
+## Section 11, MD Jebon Sheikh (2303160) — slides 41 to 46
 
-**[Slide 45]** I am Jebon. I own social impact, ethics and future strategy. And a business that only
+**[Slide 41]** I am Jebon. I own social impact, ethics and future strategy. And a business that only
 answers to its balance sheet is not a business we want to run.
 
-**[Slide 46]** Triple bottom line. People: riders lose the worst trips on the network, a pad income
+**[Slide 42]** Triple bottom line. People: riders lose the worst trips on the network, a pad income
 for households that own a roof, and fewer injuries because fewer road kilometres. Planet: no tailpipe
 emissions and less fuel burned, against rotor noise as a cost paid in goodwill. Profit: a fixed
 window the platforms cannot match, contribution that scales with corridors, and a regulator who can
@@ -358,13 +331,13 @@ paying, most dangerous trips if we take the easy ones first. We will take them d
 slowly, and we will publish what it costs the rider who loses one. People first is only credible if
 it names who pays for it. The riders pay, so the riders are in scope.
 
-**[Slide 47]** Five ethics commitments we would publish, written before launch rather than after
+**[Slide 43]** Five ethics commitments we would publish, written before launch rather than after
 criticism. No flight over a crowd. The aircraft may refuse. Pad consent is renewable on thirty days
 notice. Riders keep their income floor, so corridor assignment never drops anyone below their current
 daily average. And every incident is disclosed, to the customer, the pad owner and the regulator, in
 that order.
 
-**[Slide 48]** Ethics of the AI specifically, five limits we will not cross whichever model is in the
+**[Slide 44]** Ethics of the AI specifically, five limits we will not cross whichever model is in the
 loop. No model commands a flight, because models recommend and control stays local. No training on
 customer data. Every decision is logged, including vision output, Jev action and GLM
 recommendation. Confidence is respected, so below the floor the system abstains rather than guessing a
@@ -374,7 +347,7 @@ aircraft will not argue.
 Rule zero is in the green strip: the drone must be safe to fly with no network, no model and no
 data.
 
-**[Slide 49]** Three horizons. Horizon one, months zero to six: CAAB pre-application answered, one
+**[Slide 45]** Three horizons. Horizon one, months zero to six: CAAB pre-application answered, one
 hub, two corridors, forty pads, vision only with Jev behind a flag. Horizon two, six to eighteen
 months: written permission in hand, Jev and GLM live on escalated flights, break even on one hub.
 Horizon three, years two and three: Dhaka corridors, three more hubs, medical and blood contracts,
@@ -383,7 +356,7 @@ corridor data sold as a product.
 Permission gates Horizon two and break even gates Horizon three. Neither can be bought ahead of the
 other. And note the strip: Rajshahi is Horizons one and two, Dhaka is Horizon three.
 
-**[Slide 50]** So six conditions, and the verdict. CAAB grants corridor permission, binary, not yet.
+**[Slide 46]** So six conditions, and the verdict. CAAB grants corridor permission, binary, not yet.
 A hub flies sixteen deliveries a day against twelve needed, not yet. Contribution holds above 40
 taka, we model 43, not yet. Landing on a pad rather than a rooftop, not yet. Escalation keeps AI cost
 under 1 taka a flight, not yet. And monsoon does not close the network, not yet.
@@ -394,7 +367,7 @@ Rajshahi, before any capital is committed to Dhaka.
 
 ---
 
-## Closing, slide 51
+## Closing, slide 47
 
-**[Slide 51]** Thank you. We welcome questions from the professor and audience, and we have left
+**[Slide 47]** Thank you. We welcome questions from the professor and audience, and we have left
 three on the slide that we would most like to be asked. Thank you.
