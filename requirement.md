@@ -47,9 +47,9 @@ Model assumption.
 - Standing descriptor, printed in the footer of every slide: **Vision and AI powered drone food
   delivery**. It is the only line that goes in the footer, and it never changes per section.
 - "SkyBhat" must not appear anywhere.
-- "As the crow flies.", "HUMANITIES GROUP PRESENTATION", "8 presenters | 8 frameworks | 47 slides"
-  and similar decorative filler are banned. No eye brow strapline on the title slide. Counts of
-  slides, frameworks or presenters never appear on a slide.
+- "As the crow flies.", "HUMANITIES GROUP PRESENTATION" and similar decorative filler are banned,
+  as is any strapline on the title slide. Counts of slides, frameworks or presenters never appear
+  on a slide, with the single exception of the closing line on slide 2.
 - Trademark and domain availability has **not** been checked. Say so if asked.
 
 ## 4. Technology: vision, Jev and GLM
@@ -103,35 +103,70 @@ are longer relative to our 6 km range and we need a higher density of pad sites 
 
 ## 6. Team, sections and framework assignment
 
+Eleven sections, eight presenters. Srijon, Kabbo and Mubashshirul each carry two sections; the
+other five carry one. The word "and" is written out rather than using an ampersand, and hyphens are
+used in compound names, because the deck bans em and en dashes.
+
 | # | Student ID | Presenter | Section | Framework |
 |---|---|---|---|---|
-| 1 | 2303179 | MD Masfie Amin Srijon | Business idea and market problem | Problem Solution Fit, Value Proposition Canvas |
-| 2 | 2303180 | Nafis Islam Kabbo | Business model and revenue strategy | Business Model Canvas, technology procurement |
-| 3 | 2303127 | MRM Mubashshirul Haque | Internal strengths and weaknesses | SWOT internal |
-| 4 | 2303148 | Refayet Hossain Ananda | External opportunities and threats | SWOT external |
-| 5 | 2303174 | MD. Nafis Sadot | External business environment | PESTEL |
-| 6 | 2303177 | Neloy Nandi | Competition and industry analysis | Porter's Five Forces |
-| 7 | 2303181 | Anindo Chakma | Operations, people and risk management | Operations and Risk Analysis |
-| 8 | 2303160 | MD Jebon Sheikh | Social impact, ethics and future strategy | Triple Bottom Line, Future Strategy |
+| 1 | 2303179 | MD Masfie Amin Srijon | The Problem and Market We Enter | Problem-Solution Fit |
+| 2 | 2303179 | MD Masfie Amin Srijon | Value Proposition and Problem-Solution Fit | Value Proposition Canvas |
+| 3 | 2303180 | Nafis Islam Kabbo | Technology: Vision, Jev and GLM | Architecture and Technology Selection |
+| 4 | 2303180 | Nafis Islam Kabbo | Technical Safety and Navigation Risk | Risk Analysis |
+| 5 | 2303127 | MRM Mubashshirul Haque | Business Model and Revenue | Business Model Canvas |
+| 6 | 2303127 | MRM Mubashshirul Haque | Unit Economics and Break-Even | Cost and Contribution Analysis |
+| 7 | 2303174 | MD. Nafis Sadot | Internal Strengths and Weaknesses | SWOT internal |
+| 8 | 2303148 | Refayet Hossain Ananda | External Opportunities and Threats | SWOT external analysis |
+| 9 | 2303177 | Neloy Nandi | Competition and Industry Landscape | Porter's Five Forces |
+| 10 | 2303181 | Anindo Chama | Operations and People System | Operations Process Design |
+| 11 | 2303160 | MD Jebon Sheikh | Social Impact, Ethics and Future Strategy | Triple Bottom Line + Ethics + Future Strategy |
+
+### Where the content sits
+
+| Section | Slides | Content |
+|---|---|---|
+| 1 | 3 to 5 | The corridor service, why Rajshahi first, and the measured Dhaka road tax |
+| 2 | 6 and 7 | Value Proposition Canvas, and the Problem-Solution Fit verdict |
+| 3 | 8 to 10 | Escalation architecture, the four architectures plotted, and the model selection case |
+| 4 | 11 to 14 | Risk heat map, risk register, and the three prohibitions we will not take |
+| 5 | 15 and 16 | Business Model Canvas and the revenue streams |
+| 6 | 17 to 19 | Hub cost line by line, unit economics, and break even |
+| 7 | 20 to 22 | SWOT internal: strengths, weaknesses, and the limit on each strength |
+| 8 | 23 to 25 | SWOT external: opportunities, threats, and an owner plus trigger for each |
+| 9 | 26 to 28 | The CAAB regulatory gate, Porter's five forces, and the pad network moat |
+| 10 | 29 to 31 | Order handover process, the nine hub roles, and the escalation procedure |
+| 11 | 32 to 36 | Triple bottom line, two ethics slides, the three horizons, and the verdict |
+
+### Load and framework notes
+
+- **Load:** three to seven content slides per presenter. Eleven sections over eight people forces
+  the three people who hold two sections to carry roughly twice the load of the five who hold one,
+  so Kabbo at seven and the three shortest at three is the spread, not a failure.
+- **PESTEL is not a named framework.** Its material survives in three places: the regulatory gate
+  slide now opens Section 9, because regulation shapes the industry landscape before Porter does;
+  the economic constraint is stated in the revenue and unit economics slides; and the social
+  acceptance argument sits in the Rajshahi pilot slide. Restore PESTEL as Section 12 only if the
+  brief explicitly asks for it.
+
 
 ## 7. Structure
 
-48 slides: title, overview, eleven section dividers, thirty five content slides, closing. Section 4
-carries four content slides because the risk argument is the part that most needs a diagram.
+37 slides: title, overview, thirty four content slides, closing. **There are no section divider
+pages.** A full page carrying nothing but a section title was judged to be a wasted page, and the
+header line on every content slide already states which section the audience is in.
 
 - **Slide 1, title.** Big AeroSetu wordmark, the standing descriptor, and a roll call of the eight
   presenters showing their section numbers and names. Nothing else. No strapline, no tagline, no
   "Rajshahi first" box, no counts line. The hero image on the right is `slide_one_hero.png`,
   supplied by the client.
-- **Slide 2, overview.** Title is exactly **Overview**, subtitle is exactly **Presentation
-  outline**. Section number in the left gutter, section title beside it, framework pushed to the
-  right edge, one row per section, in three labelled columns. **No page or slide number appears
-  anywhere on this slide.** The same header treatment is used on
-  every page from slide 2 to the end.
-- **Each section opens with a divider** carrying the minimal section title, the framework name and
-  one claim the section has to land, plus a burgundy spine down the left edge. Dividers carry **no
-  decorative section numeral**, **no presenter name** and **no "presented by" label**. The header
-  eyebrow on the following slides already states the section number.
+- **Slide 2, overview.** Header line `Contents`, title exactly **Overview**, subtitle exactly
+  **Presentation outline**, identical in structure to every other page. The body is a two column
+  contents page read **top to bottom: sections 1 to 6 in the left column, 7 to 11 in the right**.
+  Each entry is a numbered burgundy disc, the section title, and the framework underneath, with a
+  hairline rule between entries. No table header row, no zebra striping, no presenter count line,
+  and **no page or slide number anywhere on this slide**.
+- **No section divider page exists.** Sections are separated by the header line and by running
+  order only. Do not reintroduce one.
 - **Final slide, thank you.** No names. Follow the earlier LLM deck: "Thank You", "Open
   Discussions", a line welcoming questions from the professor and audience, and three numbered
   discussion questions.
@@ -174,16 +209,19 @@ carries four content slides because the risk argument is the part that most need
 
 ## 10. Header, footer and slide numbering
 
-- **Header, line one: the minimal section title, prefixed with its number**, for example
-  `6. Internal strengths and weaknesses`. 14 pt bold, burgundy.
-- **Header, line two: the sub title**, which changes on every page. 26 pt, shrunk a step for long
-  titles.
+- **Every page carries the same three band header.** Line one is the minimal section title prefixed
+  with its number, for example `6. Internal Strengths and Weaknesses`, 14 pt bold burgundy. Line two
+  is that page's own title, 26 pt, shrunk a step for long titles. Line three is the subtitle, 16 pt
+  slate, and is absent on pages that do not need one. Slide 2 uses the same bands with `Contents` on
+  line one.
+- **Because there are no divider pages, line one is the only place the audience is told which
+  section they are in. It must not be dropped to save space.**
 - **The three header bands must never touch.** Fixed positions in inches: section line 0.20 to
-  0.44, page title 0.48 to 1.02, kicker 1.04 to 1.32, content from 1.42. Do not move a band
+  0.44, page title 0.48 to 1.02, subtitle 1.04 to 1.32, content from 1.42. Do not move a band
   without moving the one below it.
 - **Footer left, low on the slide: `Vision and AI powered drone food delivery`.** Always that
   string. It is not the brand name, not the section title, and it never varies.
-- **Footer right, on the same low line: the page counter written as one unit**, `3/48`, not the
+- **Footer right, on the same low line: the page counter written as one unit**, `3/37`, not the
   number and the total in separate boxes. The number is a live PowerPoint `slidenum` field,
   injected by `build/slidenum.py`, so it renumbers itself when slides are inserted, moved or
   deleted. The total is static text, because PowerPoint has no total-slides field; if the client
@@ -238,15 +276,17 @@ Report the result of each, do not claim success:
 - **No text below 12 pt**, verified by reading font sizes out of the generated XML.
 - Body text is 14 pt or larger.
 - Footer left shows exactly `Vision and AI powered drone food delivery`.
-- Page counter reads `n/48` as one unit, the number is a live field, and it is confirmed by
+- Page counter reads `n/37` as one unit, the number is a live field, and it is confirmed by
   poisoning the cached values, rendering to PDF and checking PowerPoint recomputed all of them.
-- Slide 2 is titled `Overview` with the subtitle `Presentation outline`, and lists all eleven
-  sections.
+- Slide 2 is titled `Overview` with the subtitle `Presentation outline`, lists all eleven sections
+  as a two column contents page, and carries no page number.
 - Slide 1 carries the wordmark, the descriptor and the roll call only, with `slide_one_hero.png`
   on the right.
 - No "presented by" text and no presenter name on any divider.
 - "SkyBhat", "As the crow flies." and "HUMANITIES GROUP PRESENTATION" appear nowhere.
-- Every content page shows its section number and minimal title above its own sub title.
+- Every content page shows the numbered section line, then the page title, then the subtitle, in
+  the three fixed bands.
+- There are 37 slides and no section divider page.
 - Slide titles contain no questions.
 - The last slide is a thank you with no names and no references or credits slides.
 - All three technology tiers and the escalation order are present.

@@ -2,7 +2,7 @@
 
 **Presenter:** Nafis Islam Kabbo (2303180)
 **Sections:** 3. Technology: Vision, Jev and GLM · 4. Technical Safety and Navigation Risk
-**Slides:** 10 to 18 of `output/AeroSetu_Group_Presentation-v1.pptx`
+**Slides:** 8 to 14 of `output/AeroSetu_Group_Presentation-v1.pptx`
 **Length:** about 6 minutes, 950 spoken words
 
 Read the stage directions, not the slide. The questions in this file are there to be asked out loud,
@@ -19,15 +19,15 @@ Everything below supports that sentence.
 
 ---
 
-## Slide 10, section divider
+## Section 3 opener
 
-Read the claim on screen, then pause before you move.
+Take a breath here. This is the start of your two sections.
 
 > "Vision does the flying. The models are called only when a decision is hard."
 
 ---
 
-## Slide 11, the escalation architecture
+## Slide 8, the escalation architecture
 
 Walk left to right along the three blocks, then drop your hand to the green bar underneath.
 
@@ -60,7 +60,7 @@ network line.
 
 ---
 
-## Slide 12, four architectures plotted
+## Slide 9, four architectures plotted
 
 > Before we built it we drew the options on two axes: how fast the answer comes back, and whether
 > the system can handle the genuinely hard case.
@@ -79,7 +79,7 @@ network line.
 
 ---
 
-## Slide 13, GLM and Jev on licence and cost
+## Slide 10, GLM and Jev on licence and cost
 
 > Now the commercial case, because a technology choice that cannot be justified on a spreadsheet is a
 > hobby.
@@ -103,13 +103,13 @@ network line.
 
 ---
 
-## Slide 14, section 4 divider
+## Section 4 opener
 
-> A risk without an owner and a trigger is only a worry.
+
 
 ---
 
-## Slide 15, the nine risks plotted
+## Slide 11, the nine risks plotted
 
 > Nine risks, plotted by probability against impact. The colour gets worse as you move up and right.
 
@@ -131,11 +131,11 @@ network line.
 >
 > The aircraft does not stop being safe, because Jev was never on the safety path. We keep a
 > deterministic rule set that reproduces its decisions. We fall back to GLM, which is slower and
-> dearer. And we rebuild. That is the whole plan, and it is why the green bar on slide 11 matters.
+> dearer. And we rebuild. That is the whole plan, and it is why the green bar on slide 8 matters.
 
 ---
 
-## Slides 16 and 17, the register
+## Slides 12 and 13, the register
 
 Do not read these tables aloud. Say the shape of them and move on.
 
@@ -148,7 +148,7 @@ Do not read these tables aloud. Say the shape of them and move on.
 
 ---
 
-## Slide 18, the three prohibitions
+## Slide 14, the three prohibitions
 
 Slow down. This is the most important slide in my section.
 
@@ -191,6 +191,6 @@ Slow down. This is the most important slide in my section.
   on slide 12, and the Jev disappearance question on slide 15. If time is short, cut slide 12's
   question, not slide 15's.
 - The orchestra line and the menu line are your two easy wins. Say them slowly.
-- Do not read the tables on 16 and 17. Markers penalise reading aloud; they reward shape and
+- Do not read the tables on 12 and 13. Markers penalise reading aloud; they reward shape and
   ownership.
 - Land the section on the three prohibitions, not on the register. That is the part that sticks.
