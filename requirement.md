@@ -103,51 +103,44 @@ are longer relative to our 6 km range and we need a higher density of pad sites 
 
 ## 6. Team, sections and framework assignment
 
-Eleven sections, eight presenters. Srijon, Kabbo and Mubashshirul each carry two sections; the
-other five carry one. The word "and" is written out rather than using an ampersand, and hyphens are
-used in compound names, because the deck bans em and en dashes.
+Eight sections, eight presenters, one section each. Sections 1, 2 and 3 are merges of two earlier
+sections and are therefore the longer blocks. The word "and" is written out rather than using an
+ampersand, because the deck bans em and en dashes.
 
 | # | Student ID | Presenter | Section | Framework |
 |---|---|---|---|---|
-| 1 | 2303179 | MD Masfie Amin Srijon | The Problem and Market We Enter | Problem-Solution Fit |
-| 2 | 2303179 | MD Masfie Amin Srijon | Value Proposition and Problem-Solution Fit | Value Proposition Canvas |
-| 3 | 2303180 | Nafis Islam Kabbo | Technology: Vision, Jev and GLM | Architecture and Technology Selection |
-| 4 | 2303180 | Nafis Islam Kabbo | Technical Safety and Navigation Risk | Risk Analysis |
-| 5 | 2303127 | MRM Mubashshirul Haque | Business Model and Revenue | Business Model Canvas |
-| 6 | 2303127 | MRM Mubashshirul Haque | Unit Economics and Break-Even | Cost and Contribution Analysis |
-| 7 | 2303174 | MD. Nafis Sadot | Internal Strengths and Weaknesses | SWOT internal |
-| 8 | 2303148 | Refayet Hossain Ananda | External Opportunities and Threats | SWOT external analysis |
-| 9 | 2303177 | Neloy Nandi | Competition and Industry Landscape | Porter's Five Forces |
-| 10 | 2303181 | Anindo Chama | Operations and People System | Operations Process Design |
-| 11 | 2303160 | MD Jebon Sheikh | Social Impact, Ethics and Future Strategy | Triple Bottom Line + Ethics + Future Strategy |
+| 1 | 2303179 | MD Masfie Amin Srijon | The Problem, Market and Value Proposition | Problem-Solution Fit and Value Proposition Canvas |
+| 2 | 2303180 | Nafis Islam Kabbo | Technology, Safety and Navigation Risk | Architecture and Technology Selection and Risk Analysis |
+| 3 | 2303127 | MRM Mubashshirul Haque | Business Model, Revenue and Unit Economics | Business Model Canvas and Cost and Contribution Analysis |
+| 4 | 2303160 | MD Jebon Sheikh | Internal Strengths and Weaknesses | SWOT internal |
+| 5 | 2303148 | Refayet Hossain Ananda | External Opportunities and Threats | SWOT external analysis |
+| 6 | 2303177 | Neloy Nandi | Competition and Industry Landscape | Porter's Five Forces |
+| 7 | 2303181 | Anindo Chama | Operations and People System | Operations Process Design |
+| 8 | 2303174 | MD. Nafis Sadot | Social Impact, Ethics and Future Strategy | Triple Bottom Line, Ethics, Future Strategy |
 
 ### Where the content sits
 
 | Section | Slides | Content |
 |---|---|---|
-| 1 | 3 to 5 | The corridor service, why Rajshahi first, and the measured Dhaka road tax |
-| 2 | 6 and 7 | Value Proposition Canvas, and the Problem-Solution Fit verdict |
-| 3 | 8 to 10 | Escalation architecture, the four architectures plotted, and the model selection case |
-| 4 | 11 to 14 | Risk heat map, risk register, and the three prohibitions we will not take |
-| 5 | 15 and 16 | Business Model Canvas and the revenue streams |
-| 6 | 17 to 19 | Hub cost line by line, unit economics, and break even |
-| 7 | 20 to 22 | SWOT internal: strengths, weaknesses, and the limit on each strength |
-| 8 | 23 to 25 | SWOT external: opportunities, threats, and an owner plus trigger for each |
-| 9 | 26 to 28 | The CAAB regulatory gate, Porter's five forces, and the pad network moat |
-| 10 | 29 to 31 | Order handover process, the nine hub roles, and the escalation procedure |
-| 11 | 32 to 36 | Triple bottom line, two ethics slides, the three horizons, and the verdict |
+| 1 | 3 to 7 | The corridor service, why Rajshahi first, the Dhaka road tax, the Value Proposition Canvas and the Problem-Solution Fit verdict |
+| 2 | 8 to 14 | Escalation architecture, the four architectures plotted, the model selection case, the risk heat map, the risk register and the three prohibitions |
+| 3 | 15 to 19 | Business Model Canvas, revenue streams, hub cost, unit economics and break even |
+| 4 | 20 to 22 | SWOT internal: strengths, weaknesses, and the limit on each strength |
+| 5 | 23 to 25 | SWOT external: opportunities, threats, and an owner plus trigger for each |
+| 6 | 26 to 28 | The CAAB regulatory gate, Porter's five forces, and the pad network moat |
+| 7 | 29 to 31 | Order handover process, the nine hub roles, and the escalation procedure |
+| 8 | 32 to 36 | Triple bottom line, two ethics slides, the three horizons, and the verdict |
 
-### Load and framework notes
+### Notes
 
-- **Load:** three to seven content slides per presenter. Eleven sections over eight people forces
-  the three people who hold two sections to carry roughly twice the load of the five who hold one,
-  so Kabbo at seven and the three shortest at three is the spread, not a failure.
+- **Load:** three to seven content slides per presenter. Sections 1, 2 and 3 carry five, seven and
+  five; the remaining five sections carry three each except Section 8, which carries five.
+- **SWOT stays split** across Sections 4 and 5, held by two different presenters, so each gets a
+  full framework rather than half of one.
 - **PESTEL is not a named framework.** Its material survives in three places: the regulatory gate
-  slide now opens Section 9, because regulation shapes the industry landscape before Porter does;
+  slide now opens Section 6, because regulation shapes the industry landscape before Porter does;
   the economic constraint is stated in the revenue and unit economics slides; and the social
-  acceptance argument sits in the Rajshahi pilot slide. Restore PESTEL as Section 12 only if the
-  brief explicitly asks for it.
-
+  acceptance argument sits in the Rajshahi pilot slide.
 
 ## 7. Structure
 
@@ -161,7 +154,7 @@ header line on every content slide already states which section the audience is 
   supplied by the client.
 - **Slide 2, overview.** Header line `Contents`, title exactly **Overview**, subtitle exactly
   **Presentation outline**, identical in structure to every other page. The body is a two column
-  contents page read **top to bottom: sections 1 to 6 in the left column, 7 to 11 in the right**.
+  contents page read **top to bottom: sections 1 to 4 in the left column, 5 to 8 in the right**.
   Each entry is a numbered burgundy disc, the section title, and the framework underneath, with a
   hairline rule between entries. No table header row, no zebra striping, no presenter count line,
   and **no page or slide number anywhere on this slide**.
@@ -197,11 +190,11 @@ header line on every content slide already states which section the audience is 
   fewer. No paragraph anywhere. Never more than about 55 words of body text on a slide.
 - Every framework is a purpose built diagram, not a bulleted list.
 - Section titles are minimal. The framework name does the describing.
-- **Sections 3 and 4 are diagram led.** Section 3 opens with a left to right escalation flow with
+- **Section 2 is diagram led.** It opens with a left to right escalation flow with
   trigger labels on the arrows and a safety path running underneath all three tiers, then a
   two by two latency against capability map of the four architectures, then a cost share bar
-  showing AI inference as a fraction of one hub. Section 4 opens with a probability against impact
-  heat map carrying all nine risks as numbered dots.
+  showing AI inference as a fraction of one hub, then a probability against impact heat map
+  carrying all nine risks as numbered dots.
 - A diagram must survive being read from the back of a room. No diagram may rely on a legend alone,
   and no annotation may drop below 12 pt.
 - Never an em dash or en dash anywhere.
@@ -292,9 +285,9 @@ Report the result of each, do not claim success:
 - All three technology tiers and the escalation order are present.
 - Rajshahi first, Dhaka second, with the honest corridor weakness stated.
 - All eight frameworks appear as purpose built diagrams.
-- SWOT split correctly, internal in Section 7 and external in Section 8.
-- Technology sits in its own Section 3, and the risk argument in its own Section 4, rather than
-  being smeared across the business and operations sections.
+- SWOT split correctly, internal in Section 4 and external in Section 5.
+- Technology and risk sit together in Section 2, so the escalation design and the register it
+  justifies are made by the same presenter in one continuous argument.
 - **Header air is checked:** the section line, the page title and the kicker occupy three separate
   bands with clear space between them and never touch.
 - Every figure cited, every planning number labelled Model assumption.

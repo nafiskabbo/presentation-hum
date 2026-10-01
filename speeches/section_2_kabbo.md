@@ -1,9 +1,9 @@
-# Sections 3 and 4, spoken script
+# Section 2, spoken script
 
 **Presenter:** Nafis Islam Kabbo (2303180)
-**Sections:** 3. Technology: Vision, Jev and GLM · 4. Technical Safety and Navigation Risk
+**Section:** 2. Technology, Safety and Navigation Risk
 **Slides:** 8 to 14 of `output/AeroSetu_Group_Presentation-v1.pptx`
-**Length:** about 6 minutes, 950 spoken words
+**Length:** about 7 minutes, 1150 spoken words
 
 Read the stage directions, not the slide. The questions in this file are there to be asked out loud,
 to the room, and then answered by you. They are marked `Q:`.
@@ -19,11 +19,7 @@ Everything below supports that sentence.
 
 ---
 
-## Section 3 opener
-
-Take a breath here. This is the start of your two sections.
-
-> "Vision does the flying. The models are called only when a decision is hard."
+Take a breath before slide 8. This is the longest section in the deck and the one we most want to defend.
 
 ---
 
@@ -102,10 +98,6 @@ network line.
 > of one hub. Escalation is what keeps it there.
 
 ---
-
-## Section 4 opener
-
-
 
 ---
 
